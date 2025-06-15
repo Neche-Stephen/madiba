@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Accommodation Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(239, 68, 68, 0.5); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .float-animation { animation: float 3s ease-in-out infinite; }
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        .slide-in { animation: slideIn 0.6s ease-out forwards; }
+        
+        .slider-container {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform;
+        }
+        
+        .slider-item {
+            flex: 0 0 100%;
+            padding: 0 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .slider-item {
+                flex: 0 0 50%;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .slider-item {
+                flex: 0 0 33.333333%;
+            }
+        }
+        
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(239, 68, 68, 0.2);
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-btn:hover {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: rgba(239, 68, 68, 0.5);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .nav-btn:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+        
+        .nav-btn.prev {
+            left: 1rem;
+        }
+        
+        .nav-btn.next {
+            right: 1rem;
+        }
+        
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        .dots-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background: rgba(239, 68, 68, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dot.active {
+            background: rgb(239, 68, 68);
+            transform: scale(1.2);
+        }
+        
+        .dot:hover {
+            background: rgba(239, 68, 68, 0.6);
+            transform: scale(1.1);
+        }
+        
+        /* Touch gestures */
+        .slider-container {
+            touch-action: pan-y;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        /* Smooth scrolling for better performance */
+        .slider-track {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 640px) {
+            .nav-btn {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            
+            .nav-btn.prev {
+                left: 0.5rem;
+            }
+            
+            .nav-btn.next {
+                right: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen py-8 px-4">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-12">Student Accommodation</h1>
+        
+        <!-- Slider Container -->
+        <div class="slider-container relative">
+            <!-- Navigation Buttons -->
+            <button class="nav-btn prev" id="prevBtn" aria-label="Previous slide">
+                <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            
+            <button class="nav-btn next" id="nextBtn" aria-label="Next slide">
+                <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            
+            <!-- Slider Track -->
+            <div class="slider-track" id="sliderTrack">
+                <!-- Executive Room of 1 -->
+                <div class="slider-item">
+                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 pulse-glow h-full">
+                        <!-- Room Image -->
+                        <div class="relative h-48 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-red-600/30"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center text-gray-600">
+                                    <svg class="w-16 h-16 mx-auto mb-2 opacity-60" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                                    </svg>
+                                    <p class="text-sm font-medium opacity-70">Executive Room Image</p>
+                                </div>
+                            </div>
+                            <!-- Room Type Badge -->
+                            <div class="absolute top-4 left-4">
+                                <div class="bg-red-700 text-white px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm bg-opacity-90">
+                                    EXECUTIVE
+                                </div>
+                            </div>
+                            <!-- Occupancy Badge -->
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-white/90 backdrop-blur-sm text-red-700 px-3 py-2 rounded-full text-sm font-bold flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                    </svg>
+                                    1 Person
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Room Title -->
+                        <div class="px-6 py-4 border-b border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-800">Executive Room</h2>
+                            <p class="text-gray-600 text-sm">Premium single occupancy room</p>
+                        </div>
+                        
+                        <div class="p-6">
+                            <!-- Pricing Section -->
+                            <div class="mb-6">
+                                <div class="bg-red-50 rounded-2xl p-4 mb-4">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-gray-700 font-medium">Nile Students</span>
+                                        <div class="text-right">
+                                            <span class="text-2xl font-bold text-red-600">₦3,616,000</span>
+                                            <p class="text-sm text-gray-500">per session</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-700 font-medium">Baze Students</span>
+                                        <div class="text-right">
+                                            <span class="text-2xl font-bold text-red-600">₦3,816,000</span>
+                                            <p class="text-sm text-gray-500">per session</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-green-50 border border-green-200 rounded-xl p-3">
+                                    <div class="flex items-center text-green-700">
+                                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                        </svg>
+                                        <span class="text-sm font-semibold">10% discount for returning students</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Amenities -->
+                            <div class="space-y-3">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-4">Included Amenities</h3>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">24-hour Free WiFi</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.477.859h4z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Regular Power & Solar Energy</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Weekly Laundry Services</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Daily Cleaning & Room Services</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 pt-4 border-t border-gray-200">
+                                <button class="w-full bg-gradient-to-r from-red-500 to-red-600 text-white font-bold py-3 px-6 rounded-xl hover:from-red-600 hover:to-red-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Standard Room of 1 -->
+                <div class="slider-item">
+                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 h-full">
+                        <!-- Room Image -->
+                        <div class="relative h-48 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-red-400/20 to-red-500/30"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center text-gray-600">
+                                    <svg class="w-16 h-16 mx-auto mb-2 opacity-60" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                                    </svg>
+                                    <p class="text-sm font-medium opacity-70">Standard Room Image</p>
+                                </div>
+                            </div>
+                            <!-- Room Type Badge -->
+                            <div class="absolute top-4 left-4">
+                                <div class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm bg-opacity-90">
+                                    STANDARD
+                                </div>
+                            </div>
+                            <!-- Occupancy Badge -->
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-white/90 backdrop-blur-sm text-red-600 px-3 py-2 rounded-full text-sm font-bold flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                    </svg>
+                                    1 Person
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Room Title -->
+                        <div class="px-6 py-4 border-b border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-800">Standard Room</h2>
+                            <p class="text-gray-600 text-sm">Comfortable single occupancy room</p>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="mb-6">
+                                <div class="bg-red-50 rounded-2xl p-4 mb-4">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-gray-700 font-medium">Nile Students</span>
+                                        <div class="text-right">
+                                            <span class="text-2xl font-bold text-red-600">₦3,516,000</span>
+                                            <p class="text-sm text-gray-500">per session</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-700 font-medium">Baze Students</span>
+                                        <div class="text-right">
+                                            <span class="text-2xl font-bold text-red-600">₦3,716,000</span>
+                                            <p class="text-sm text-gray-500">per session</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-green-50 border border-green-200 rounded-xl p-3">
+                                    <div class="flex items-center text-green-700">
+                                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                        </svg>
+                                        <span class="text-sm font-semibold">10% discount for returning students</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-4">Included Amenities</h3>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">24-hour Free WiFi</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.477.859h4z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Regular Power & Solar Energy</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Weekly Laundry Services</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Daily Cleaning & Room Services</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 pt-4 border-t border-gray-200">
+                                <button class="w-full bg-gradient-to-r from-red-500 to-red-600 text-white font-bold py-3 px-6 rounded-xl hover:from-red-600 hover:to-red-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Executive Room of 2 -->
+                <div class="slider-item">
+                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 h-full">
+                        <!-- Room Image -->
+                        <div class="relative h-48 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-red-600/30"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center text-gray-600">
+                                    <svg class="w-16 h-16 mx-auto mb-2 opacity-60" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                                    </svg>
+                                    <p class="text-sm font-medium opacity-70">Executive Room Image</p>
+                                </div>
+                            </div>
+                            <!-- Room Type Badge -->
+                            <div class="absolute top-4 left-4">
+                                <div class="bg-red-700 text-white px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm bg-opacity-90">
+                                    EXECUTIVE
+                                </div>
+                            </div>
+                            <!-- Occupancy Badge -->
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-white/90 backdrop-blur-sm text-red-700 px-3 py-2 rounded-full text-sm font-bold flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                                    </svg>
+                                    2 People
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Room Title -->
+                        <!-- Room Title -->
+                        <div class="px-6 py-4 border-b border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-800">Executive Room</h2>
+                            <p class="text-gray-600 text-sm">Premium shared occupancy room</p>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="mb-6">
+                                <div class="bg-red-50 rounded-2xl p-4 mb-4">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-gray-700 font-medium">Nile Students</span>
+                                        <div class="text-right">
+                                            <span class="text-2xl font-bold text-red-600">₦2,016,000</span>
+                                            <p class="text-sm text-gray-500">per person/session</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-700 font-medium">Baze Students</span>
+                                        <div class="text-right">
+                                            <span class="text-2xl font-bold text-red-600">₦2,216,000</span>
+                                            <p class="text-sm text-gray-500">per person/session</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-green-50 border border-green-200 rounded-xl p-3">
+                                    <div class="flex items-center text-green-700">
+                                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                        </svg>
+                                        <span class="text-sm font-semibold">10% discount for returning students</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-4">Included Amenities</h3>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">24-hour Free WiFi</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.477.859h4z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Regular Power & Solar Energy</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Weekly Laundry Services</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Daily Cleaning & Room Services</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 pt-4 border-t border-gray-200">
+                                <button class="w-full bg-gradient-to-r from-red-500 to-red-600 text-white font-bold py-3 px-6 rounded-xl hover:from-red-600 hover:to-red-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Standard Room of 2 -->
+                <div class="slider-item">
+                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 h-full">
+                        <!-- Room Image -->
+                        <div class="relative h-48 bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-red-400/20 to-red-500/30"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center text-gray-600">
+                                    <svg class="w-16 h-16 mx-auto mb-2 opacity-60" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                                    </svg>
+                                    <p class="text-sm font-medium opacity-70">Standard Room Image</p>
+                                </div>
+                            </div>
+                            <!-- Room Type Badge -->
+                            <div class="absolute top-4 left-4">
+                                <div class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm bg-opacity-90">
+                                    STANDARD
+                                </div>
+                            </div>
+                            <!-- Occupancy Badge -->
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-white/90 backdrop-blur-sm text-red-600 px-3 py-2 rounded-full text-sm font-bold flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                                    </svg>
+                                    2 People
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Room Title -->
+                        <div class="px-6 py-4 border-b border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-800">Standard Room</h2>
+                            <p class="text-gray-600 text-sm">Comfortable shared occupancy room</p>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="mb-6">
+                                <div class="bg-red-50 rounded-2xl p-4 mb-4">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-gray-700 font-medium">Nile Students</span>
+                                        <div class="text-right">
+                                            <span class="text-2xl font-bold text-red-600">₦1,916,000</span>
+                                            <p class="text-sm text-gray-500">per person/session</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-700 font-medium">Baze Students</span>
+                                        <div class="text-right">
+                                            <span class="text-2xl font-bold text-red-600">₦2,116,000</span>
+                                            <p class="text-sm text-gray-500">per person/session</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-green-50 border border-green-200 rounded-xl p-3">
+                                    <div class="flex items-center text-green-700">
+                                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                        </svg>
+                                        <span class="text-sm font-semibold">10% discount for returning students</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-4">Included Amenities</h3>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">24-hour Free WiFi</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.477.859h4z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Regular Power & Solar Energy</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Weekly Laundry Services</span>
+                                </div>
+                                
+                                <div class="flex items-center text-gray-700">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                        <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-medium">Daily Cleaning & Room Services</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 pt-4 border-t border-gray-200">
+                                <button class="w-full bg-gradient-to-r from-red-500 to-red-600 text-white font-bold py-3 px-6 rounded-xl hover:from-red-600 hover:to-red-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dots Navigation -->
+            <div class="dots-container" id="dotsContainer">
+                <!-- Dots will be generated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class ResponsiveSlider {
+            constructor(container) {
+                this.container = container;
+                this.track = container.querySelector('.slider-track');
+                this.items = container.querySelectorAll('.slider-item');
+                this.prevBtn = container.querySelector('.prev');
+                this.nextBtn = container.querySelector('.next');
+                this.dotsContainer = container.querySelector('#dotsContainer');
+                
+                this.currentIndex = 0;
+                this.itemsPerView = 1;
+                this.totalItems = this.items.length;
+                this.maxIndex = 0;
+                
+                // Touch/swipe properties
+                this.startX = 0;
+                this.currentX = 0;
+                this.isDragging = false;
+                this.startTime = 0;
+                
+                this.init();
+            }
+            
+            init() {
+                this.updateItemsPerView();
+                this.createDots();
+                this.updateSliderPosition();
+                this.bindEvents();
+                
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    this.updateItemsPerView();
+                    this.updateSliderPosition();
+                    this.createDots();
+                });
+            }
+            
+            updateItemsPerView() {
+                const containerWidth = this.container.offsetWidth;
+                
+                if (containerWidth >= 1024) {
+                    this.itemsPerView = 3;
+                } else if (containerWidth >= 768) {
+                    this.itemsPerView = 2;
+                } else {
+                    this.itemsPerView = 1;
+                }
+                
+                this.maxIndex = Math.max(0, this.totalItems - this.itemsPerView);
+                
+                // Ensure current index is within bounds
+                if (this.currentIndex > this.maxIndex) {
+                    this.currentIndex = this.maxIndex;
+                }
+            }
+            
+            createDots() {
+                this.dotsContainer.innerHTML = '';
+                
+                const totalPages = this.maxIndex + 1;
+                
+                for (let i = 0; i < totalPages; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = `dot ${i === this.currentIndex ? 'active' : ''}`;
+                    dot.addEventListener('click', () => this.goToSlide(i));
+                    this.dotsContainer.appendChild(dot);
+                }
+            }
+            
+            updateSliderPosition() {
+                const translateX = -(this.currentIndex * (100 / this.itemsPerView));
+                this.track.style.transform = `translateX(${translateX}%)`;
+                
+                // Update navigation buttons
+                this.prevBtn.disabled = this.currentIndex === 0;
+                this.nextBtn.disabled = this.currentIndex >= this.maxIndex;
+                
+                // Update dots
+                const dots = this.dotsContainer.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentIndex);
+                });
+            }
+            
+            goToSlide(index) {
+                this.currentIndex = Math.max(0, Math.min(index, this.maxIndex));
+                this.updateSliderPosition();
+            }
+            
+            nextSlide() {
+                if (this.currentIndex < this.maxIndex) {
+                    this.currentIndex++;
+                    this.updateSliderPosition();
+                }
+            }
+            
+            prevSlide() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex--;
+                    this.updateSliderPosition();
+                }
+            }
+            
+            bindEvents() {
+                // Button navigation
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                // Touch events for mobile
+                this.track.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: true });
+                this.track.addEventListener('touchmove', (e) => this.handleTouchMove(e), { passive: true });
+                this.track.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: true });
+                
+                // Mouse events for desktop
+                this.track.addEventListener('mousedown', (e) => this.handleMouseDown(e));
+                this.track.addEventListener('mousemove', (e) => this.handleMouseMove(e));
+                this.track.addEventListener('mouseup', (e) => this.handleMouseUp(e));
+                this.track.addEventListener('mouseleave', (e) => this.handleMouseUp(e));
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.prevSlide();
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                });
+            }
+            
+            handleTouchStart(e) {
+                this.startX = e.touches[0].clientX;
+                this.startTime = Date.now();
+                this.isDragging = true;
+            }
+            
+            handleTouchMove(e) {
+                if (!this.isDragging) return;
+                this.currentX = e.touches[0].clientX;
+            }
+            
+            handleTouchEnd(e) {
+                if (!this.isDragging) return;
+                
+                const diff = this.startX - this.currentX;
+                const timeDiff = Date.now() - this.startTime;
+                const velocity = Math.abs(diff) / timeDiff;
+                
+                // Swipe threshold
+                if (Math.abs(diff) > 50 || velocity > 0.3) {
+                    if (diff > 0) {
+                        this.nextSlide();
+                    } else {
+                        this.prevSlide();
+                    }
+                }
+                
+                this.isDragging = false;
+            }
+            
+            handleMouseDown(e) {
+                this.startX = e.clientX;
+                this.startTime = Date.now();
+                this.isDragging = true;
+                this.track.style.cursor = 'grabbing';
+                e.preventDefault();
+            }
+            
+            handleMouseMove(e) {
+                if (!this.isDragging) return;
+                this.currentX = e.clientX;
+                e.preventDefault();
+            }
+            
+            handleMouseUp(e) {
+                if (!this.isDragging) return;
+                
+                const diff = this.startX - this.currentX;
+                const timeDiff = Date.now() - this.startTime;
+                const velocity = Math.abs(diff) / timeDiff;
+                
+                if (Math.abs(diff) > 50 || velocity > 0.3) {
+                    if (diff > 0) {
+                        this.nextSlide();
+                    } else {
+                        this.prevSlide();
+                    }
+                }
+                
+                this.isDragging = false;
+                this.track.style.cursor = 'grab';
+            }
+        }
+        
+        // Initialize slider when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliderContainer = document.querySelector('.slider-container');
+            new ResponsiveSlider(sliderContainer);
+        });
+        
+        // Add staggered animation for initial load
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.slider-item');
+            items.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+                item.classList.add('slide-in');
+            });
+        });
+    </script>
+</body>
+</html>

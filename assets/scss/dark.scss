@@ -1,0 +1,377 @@
+/* Dark-mode */
+$white: #fff;
+$black: #181d27;
+$ddd: #ddd;
+$mediumblack: #1e2531;
+$dark-charcoal: #333;
+$white_300: rgb(128, 131, 132);
+$mediumblack_500: #2d313e;
+$border-color: #393e48;
+
+body {
+    background: $black;
+    color: #bfbfc0 !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: $white;
+}
+p, li, a, select,
+input, .custom-select,
+textarea {
+    color: #bfbfc0;
+    border-color: $border-color !important;
+    &:focus,
+    &:active {
+        background-color: transparent !important;
+    }
+}
+.lh-side-cart {
+    background-color: $black !important;
+}
+ul.navbar-nav {
+    .dropdown {
+        .dropdown-menu {
+            li {
+                a{
+                    background-color: $mediumblack;
+                }
+            }
+        }
+    }
+}
+.text-\[\#444\] {
+    color: $ddd;
+}
+.hover\:text-\[\#444\]:hover {
+    color: $ddd;
+}
+.lh-menu-inner {
+    input {
+        background-color: $mediumblack;
+        color: $white;
+        border: 1px solid $border-color !important;
+    }
+}
+.bg-\[\#000000bf\]{
+    background-color: rgba(24, 29, 39, 0.7);    
+}
+.dark-bordered {
+    border: 1px solid $border-color !important;
+}
+.section-spa-booking {
+    &::before{
+        opacity: 0.1;
+    }
+}
+.hero-image {
+    background-blend-mode: overlay;
+    background-color: rgba(19, 22, 30, 0.98);
+}
+.lh-header {
+    background-color: rgba(31, 37, 49, 0.85);
+}
+.header-fixed {
+    background-color: rgba(24, 29, 39, 0.9) !important;
+}
+.particles-bg {
+    opacity: 0.2;
+}
+.bg-\[\#f7f5f1\] {
+    background-color: $mediumblack;
+}
+.border-\[\#ddd\] {
+    border-color: $border-color;
+}
+.border-\[\#e3e1e1\] {
+    border-color: $border-color !important;
+}
+.border-\[\#808384\]{
+    border-color: #4b5164;
+}
+.border-\[\#000\] {
+    border-color: $border-color;
+}
+.border-y-\[\#e3e1e1\] {
+    border-color: $border-color;
+}
+.border-b-\[\#e3e1e1\] {
+    border-color: $border-color;
+}
+.bg-\[\#fff\] {
+    background-color: $mediumblack;
+}
+.dark-borderd{
+    border: 1px solid $border-color !important;
+}
+.text-\[\#0000000d\] {
+    color: rgb(55, 61, 77);
+}
+.text-\[\#777\] {
+    color: #bfbfc0;
+}
+.text-\[\#000\] {
+    color: $white;
+}
+.text-\[\#333\] {
+    color: $white;
+}
+.hover\:text-\[\#333\]:hover {
+    color: $white;
+}
+.hover\:text-\[\#777\]:hover {
+    color: $white;
+}
+.hover\:text-\[\#000\]:hover {
+    color: $white;
+}
+.lh-checkout-wrap {
+    .lh-check-bill-form {
+        .lh-bl-select-inner {
+            &::after{
+                color: #bfbfc0;
+            }
+        }
+    }
+}
+.checkout-page {
+    [type=radio]{
+        &:checked + label{
+            color: $white;
+        }
+        &:not(:checked) + label {
+            color: $white;
+        }
+    }
+}
+.dark-opicity-1 {
+    &::after {
+        opacity: 0.1;
+    }
+    &::before {
+        opacity: 0.1;
+    }
+}
+.lh-side-cart {
+    .lh-menu-inner {
+        .lh-menu-box {
+            &::placeholder {
+                color: $ddd;
+            }
+        }
+    }
+}
+.lh-room-features {
+    .lh-cols-room{
+        ul{
+            li{
+                color: $white;
+            }
+        }
+    }
+}
+.lh-check-bill-form{
+    form{
+        .lh-bill-wrap{
+            label{
+                color: #bfbfc0;
+            }
+        }
+    }
+}
+.lh-side-reservation-from {
+    label{
+        color: $white;
+    }
+    .form-check{
+        .form-check-label{
+            color: $white;
+        }
+    }
+}
+.darkmode-white{
+    color: $white;
+}
+.dark-opicity-2 {
+    &::after {
+        opacity: 0.2;
+    }
+    &::before {
+        opacity: 0.2;
+    }
+}
+.dark-opicity-5 {
+    &::after {
+        opacity: 0.5;   
+    }
+    &::before {
+        opacity: 0.5;
+    }
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    background-color: $black;
+    color: $white;
+}
+.lh-room {
+    button {
+        &:hover {
+            color: $white;
+        }
+    }
+}
+.lh-prices {
+    background-color: $black;
+    border: 1px solid $border-color;
+}
+footer {
+    .footer-top-section {
+        .lh-social-media {
+            .lh-footer-social {
+                .lh-control-footer {
+                    .form-control {
+                        background: #1f2531;
+                        border: 1px solid $border-color !important;
+                    }
+                }
+            }
+        }
+    }
+}
+.nav-tabs.rooms {
+    .nav-link.active {
+        &::after{
+            background-color: #1f2531;
+            border-color: $border-color;
+        }
+    }
+}
+.select-options {
+    background-color: #1f2531;
+    border: 1px solid $border-color;
+    li {
+        color: #bfbfc0;
+    }
+}
+.calendar {
+    input {
+        background-color: $black;
+        color: $white;
+    }
+}
+.outline-0 {
+    outline: 0 !important;
+}
+.lh-side-reservation {
+    .custom-select {
+        background-color: $black;
+        color: $white;
+    }
+}
+.lh-side-room {
+    .lh-side-reservation {
+        .lh-side-reservation-from {
+            .form-check {
+                input {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}
+.lh-amenities {
+    background-color: #262d3b !important;
+}
+.search-box {
+    .calendar {
+        input {
+            background-color: $mediumblack !important;
+        }
+    }
+}
+.ui.table,
+.ui.popup {
+    background-color: #1f2531;
+    border-color: $border-color;
+    &:before {
+        background-color: #1f2531;
+        border-color: $border-color !important;
+    }
+    thead {
+        th {
+            background-color: #1f2531;
+            color: #bfbfc0 !important;
+        }
+    }
+    tr {
+        td {
+            background-color: #1f2531;
+            color: #bfbfc0 !important;
+        }
+        td.active {
+            background-color: $black !important;
+            color: #bfbfc0 !important;
+        }
+    }
+}
+form {
+    input {
+        background-color: $black !important;
+        outline: 1px solid $border-color !important;
+    }
+    textarea {
+        background-color: $black !important;
+        outline: 1px solid $border-color !important;
+    }
+}
+.ld-faq {
+    .accordion {
+        .accordion-item {
+            .accordion-button {
+                background-color: $mediumblack;
+                color: $white;
+            }
+        }
+    }
+}
+.ld-faq {
+    background-color: $mediumblack;
+    border: 1px solid $border-color;
+    .accordion {
+        .accordion-item {
+            background-color: $black;
+            .accordion-button {
+                background-color: $black;
+            }
+        }
+    }
+}
+.lh-our-blog {
+    form {
+        input {
+            outline: 0 !important;
+            background-color: $mediumblack !important;
+        }
+    }
+}
+.lh-our-blog-tages {
+    ul {
+        li {
+            a {
+                background-color: $black;
+                color: #bfbfc0;
+            }
+        }
+    }
+}
+.lh-menu-restaurant {
+    .lh-menu-buttons {
+        background-color: $mediumblack !important;
+        border: 1px solid $border-color !important;
+    }
+}
+.nav-tabs {
+    border-color: $border-color;
+}
+footer {
+    background-color: $mediumblack_500 !important;
+}

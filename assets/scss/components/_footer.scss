@@ -1,0 +1,20 @@
+/* Footer */
+footer {
+    .footer-top-section {
+        .lh-social-media {
+            .lh-footer-social {
+                .lh-control-footer {
+                    .form-control {
+                        background: $tetradic;
+                        color: $white;
+                        &::placeholder {
+                            font-family: $text-font;                          
+                            font-size: 16px;
+                            color: $white_700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

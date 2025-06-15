@@ -1,0 +1,40 @@
+/* Room-details */
+.lh-room-details {
+    .slick-slider {
+        overflow: hidden;
+    }
+    .slider-nav {
+        .slick-list {
+            margin: 0 -12px;
+            width: calc(100% + 24px);
+        }
+        .slick-slide {
+            padding: 0 12px;
+        }
+    }
+}
+.lh-side-room {
+    .lh-side-reservation {
+        .lh-side-reservation-from {
+            &:not(:last-child) {
+                padding-top: 24px;
+            }
+            .form-check {
+                input {
+                    box-shadow: none;
+                    cursor: pointer;
+                    &:checked {
+                        background-color: $primary;
+                        border-color: $primary;
+                    }
+                }
+            }
+            ul {
+                min-width: 100px;
+                margin-top: 10px;
+                left: -12px;
+                right: -12px;
+            }
+        }
+    }
+}

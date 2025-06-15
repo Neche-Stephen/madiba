@@ -1,0 +1,91 @@
+/* Color-5 */
+.text-\[\#FF0000\] {
+  color: #db98b1;
+}
+
+.bg-\[\#FF0000\] {
+  background-color: #db98b1;
+}
+
+.border-\[\#FF0000\] {
+  border-color: #db98b1;
+}
+
+.hover\:text-\[\#FF0000\]:hover {
+  color: #db98b1;
+}
+
+.hover\:bg-\[\#FF0000\]:hover {
+  background-color: #db98b1;
+}
+
+.select-options li:hover {
+  background-color: rgba(219, 152, 177, 0.1);
+}
+
+.section-testimonials svg path, .section-contact svg path, .section-amenities svg path, .section-services svg path {
+  fill: #db98b1;
+}
+
+.checkout-page [type=radio]:checked + label:before {
+  border-color: #db98b1;
+}
+.checkout-page [type=radio]:checked + label:after {
+  background-color: #db98b1;
+}
+
+.prev-slick-img::after {
+  border: 1px solid #db98b1;
+}
+
+.next-slick-img::after {
+  border: 1px solid #db98b1;
+}
+
+.nav-tabs.rooms .nav-link.active::after {
+  color: #db98b1;
+  border: 1px solid #db98b1;
+}
+
+.lh-our-blog .lh-our-blog-categories ul li a:hover span {
+  color: #db98b1;
+}
+
+ul.navbar-nav .dropdown .dropdown-menu li a:hover {
+  color: #db98b1;
+}
+ul.navbar-nav li.nav-item a.nav-link:hover {
+  color: #db98b1;
+}
+ul.navbar-nav li.nav-item a.nav-link:hover::before {
+  background: #db98b1;
+}
+ul.navbar-nav li.nav-item a.nav-link::before {
+  background: #db98b1;
+}
+
+.lh-side-room .lh-side-reservation .lh-side-reservation-from .form-check input:checked {
+  background-color: #db98b1;
+  border-color: #db98b1;
+}
+
+.lh-team:hover .lh-team-image {
+  border: 1px solid #db98b1;
+}
+
+.lh-team:hover .lh-team-contain i {
+  color: #db98b1;
+}
+
+.lh-room-contain .lh-main-features .lh-room-features .lh-cols-room ul li::marker {
+  color: #db98b1;
+}
+
+.ld-faq .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+  color: #db98b1;
+}
+
+.lh-menu-restaurant .nav-link.active {
+  border: 1px solid #db98b1 !important;
+}
+/*# sourceMappingURL=color-5.css.map */

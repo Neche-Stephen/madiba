@@ -1,0 +1,91 @@
+/* Color-2 */
+.text-\[\#FF0000\] {
+  color: rgb(103, 121, 147);
+}
+
+.bg-\[\#FF0000\] {
+  background-color: rgb(103, 121, 147);
+}
+
+.border-\[\#FF0000\] {
+  border-color: rgb(103, 121, 147);
+}
+
+.hover\:text-\[\#FF0000\]:hover {
+  color: rgb(103, 121, 147);
+}
+
+.hover\:bg-\[\#FF0000\]:hover {
+  background-color: rgb(103, 121, 147);
+}
+
+.section-testimonials svg path, .section-contact svg path, .section-amenities svg path, .section-services svg path {
+  fill: rgb(103, 121, 147);
+}
+
+.checkout-page [type=radio]:checked + label:before {
+  border-color: rgb(103, 121, 147);
+}
+.checkout-page [type=radio]:checked + label:after {
+  background-color: rgb(103, 121, 147);
+}
+
+.select-options li:hover {
+  background-color: rgba(103, 121, 147, 0.1);
+}
+
+.prev-slick-img::after {
+  border: 1px solid rgb(103, 121, 147);
+}
+
+.next-slick-img::after {
+  border: 1px solid rgb(103, 121, 147);
+}
+
+.nav-tabs.rooms .nav-link.active::after {
+  color: rgb(103, 121, 147);
+  border: 1px solid rgb(103, 121, 147);
+}
+
+.lh-our-blog .lh-our-blog-categories ul li a:hover span {
+  color: rgb(103, 121, 147);
+}
+
+ul.navbar-nav .dropdown .dropdown-menu li a:hover {
+  color: rgb(103, 121, 147);
+}
+ul.navbar-nav li.nav-item a.nav-link:hover {
+  color: rgb(103, 121, 147);
+}
+ul.navbar-nav li.nav-item a.nav-link:hover::before {
+  background: rgb(103, 121, 147);
+}
+ul.navbar-nav li.nav-item a.nav-link::before {
+  background: rgb(103, 121, 147);
+}
+
+.lh-side-room .lh-side-reservation .lh-side-reservation-from .form-check input:checked {
+  background-color: rgb(103, 121, 147);
+  border-color: rgb(103, 121, 147);
+}
+
+.lh-team:hover .lh-team-image {
+  border: 1px solid rgb(103, 121, 147);
+}
+
+.lh-team:hover .lh-team-contain i {
+  color: rgb(103, 121, 147);
+}
+
+.lh-room-contain .lh-main-features .lh-room-features .lh-cols-room ul li::marker {
+  color: rgb(103, 121, 147);
+}
+
+.ld-faq .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+  color: rgb(103, 121, 147);
+}
+
+.lh-menu-restaurant .nav-link.active {
+  border: 1px solid rgb(103, 121, 147) !important;
+}
+/*# sourceMappingURL=color-2.css.map */

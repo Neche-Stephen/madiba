@@ -1,0 +1,91 @@
+/* Color-4 */
+.text-\[\#FF0000\] {
+  color: rgb(211, 180, 28);
+}
+
+.bg-\[\#FF0000\] {
+  background-color: rgb(211, 180, 28);
+}
+
+.border-\[\#FF0000\] {
+  border-color: rgb(211, 180, 28);
+}
+
+.hover\:text-\[\#FF0000\]:hover {
+  color: rgb(211, 180, 28);
+}
+
+.hover\:bg-\[\#FF0000\]:hover {
+  background-color: rgb(211, 180, 28);
+}
+
+.select-options li:hover {
+  background-color: rgba(211, 180, 28, 0.1);
+}
+
+.section-testimonials svg path, .section-contact svg path, .section-amenities svg path, .section-services svg path {
+  fill: rgb(211, 180, 28);
+}
+
+.checkout-page [type=radio]:checked + label:before {
+  border-color: rgb(211, 180, 28);
+}
+.checkout-page [type=radio]:checked + label:after {
+  background-color: rgb(211, 180, 28);
+}
+
+.prev-slick-img::after {
+  border: 1px solid rgb(211, 180, 28);
+}
+
+.next-slick-img::after {
+  border: 1px solid rgb(211, 180, 28);
+}
+
+.nav-tabs.rooms .nav-link.active::after {
+  color: rgb(211, 180, 28);
+  border: 1px solid rgb(211, 180, 28);
+}
+
+.lh-our-blog .lh-our-blog-categories ul li a:hover span {
+  color: rgb(211, 180, 28);
+}
+
+ul.navbar-nav .dropdown .dropdown-menu li a:hover {
+  color: rgb(211, 180, 28);
+}
+ul.navbar-nav li.nav-item a.nav-link:hover {
+  color: rgb(211, 180, 28);
+}
+ul.navbar-nav li.nav-item a.nav-link:hover::before {
+  background: rgb(211, 180, 28);
+}
+ul.navbar-nav li.nav-item a.nav-link::before {
+  background: rgb(211, 180, 28);
+}
+
+.lh-side-room .lh-side-reservation .lh-side-reservation-from .form-check input:checked {
+  background-color: rgb(211, 180, 28);
+  border-color: rgb(211, 180, 28);
+}
+
+.lh-team:hover .lh-team-image {
+  border: 1px solid rgb(211, 180, 28);
+}
+
+.lh-team:hover .lh-team-contain i {
+  color: rgb(211, 180, 28);
+}
+
+.lh-room-contain .lh-main-features .lh-room-features .lh-cols-room ul li::marker {
+  color: rgb(211, 180, 28);
+}
+
+.ld-faq .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+  color: rgb(211, 180, 28);
+}
+
+.lh-menu-restaurant .nav-link.active {
+  border: 1px solid rgb(211, 180, 28) !important;
+}
+/*# sourceMappingURL=color-4.css.map */

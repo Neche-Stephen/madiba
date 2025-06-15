@@ -1,0 +1,33 @@
+/* Shape-2 */
+.hero-image{
+    clip-path: polygon(0 calc(100% - 80px),0 0,100% 0,100% calc(100% - 80px),50% 100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-overlay{
+    clip-path: polygon(0 calc(100% - 80px),0 0,100% 0,100% calc(100% - 80px),50% 100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.banner-image{
+    clip-path: polygon(0 calc(100% - 80px),0 0,100% 0,100% calc(100% - 80px),50% 100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.section-hero {
+    padding-bottom: 200px !important;
+}
+
+.section-search-control {
+    bottom: -150px !important;
+}
+
+/*  Responsive  */
+@media screen and (max-width: 1023px) {
+    .section-hero {
+        padding-bottom: 70px !important;
+    }
+    .section-search-control {
+        bottom: 0 !important;
+    } 
+}

@@ -1,0 +1,26 @@
+/*  Prices */
+.lh-prices {
+    box-shadow: $box-shadow;
+    &:hover {
+        .prices-image {
+            filter: grayscale(0) contrast(100%);
+        }
+    }
+    .prices-image {
+        @include ease3;
+        width: 100%;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        filter: grayscale(1) contrast(90%);
+    }
+    .prices-image.active {
+        filter: grayscale(0) contrast(100%);
+    }
+}
+/* Responsive */
+@media screen and (max-width: 1023px) {
+    .lh-prices {
+        max-width: 450px;
+        margin: auto;
+    }
+}

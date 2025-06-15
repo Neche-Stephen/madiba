@@ -1,0 +1,343 @@
+/* Dark-mode */
+body {
+  background: #181d27;
+  color: #bfbfc0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+p, li, a, select,
+input, .custom-select,
+textarea {
+  color: #bfbfc0;
+  border-color: #393e48 !important;
+}
+p:focus, p:active, li:focus, li:active, a:focus, a:active, select:focus, select:active,
+input:focus,
+input:active, .custom-select:focus, .custom-select:active,
+textarea:focus,
+textarea:active {
+  background-color: transparent !important;
+}
+
+.lh-side-cart {
+  background-color: #181d27 !important;
+}
+
+ul.navbar-nav .dropdown .dropdown-menu li a {
+  background-color: #1e2531;
+}
+
+.text-\[\#444\] {
+  color: #ddd;
+}
+
+.hover\:text-\[\#444\]:hover {
+  color: #ddd;
+}
+
+.lh-menu-inner input {
+  background-color: #1e2531;
+  color: #fff;
+  border: 1px solid #393e48 !important;
+}
+
+.bg-\[\#000000bf\] {
+  background-color: rgba(24, 29, 39, 0.7);
+}
+
+.dark-bordered {
+  border: 1px solid #393e48 !important;
+}
+
+.section-spa-booking::before {
+  opacity: 0.1;
+}
+
+.hero-image {
+  background-blend-mode: overlay;
+  background-color: rgba(19, 22, 30, 0.98);
+}
+
+.lh-header {
+  background-color: rgba(31, 37, 49, 0.85);
+}
+
+.header-fixed {
+  background-color: rgba(24, 29, 39, 0.9) !important;
+}
+
+.particles-bg {
+  opacity: 0.2;
+}
+
+.bg-\[\#f7f5f1\] {
+  background-color: #1e2531;
+}
+
+.border-\[\#ddd\] {
+  border-color: #393e48;
+}
+
+.border-\[\#e3e1e1\] {
+  border-color: #393e48 !important;
+}
+
+.border-\[\#808384\] {
+  border-color: #4b5164;
+}
+
+.border-\[\#000\] {
+  border-color: #393e48;
+}
+
+.border-y-\[\#e3e1e1\] {
+  border-color: #393e48;
+}
+
+.border-b-\[\#e3e1e1\] {
+  border-color: #393e48;
+}
+
+.bg-\[\#fff\] {
+  background-color: #1e2531;
+}
+
+.dark-borderd {
+  border: 1px solid #393e48 !important;
+}
+
+.text-\[\#0000000d\] {
+  color: rgb(55, 61, 77);
+}
+
+.text-\[\#777\] {
+  color: #bfbfc0;
+}
+
+.text-\[\#000\] {
+  color: #fff;
+}
+
+.text-\[\#333\] {
+  color: #fff;
+}
+
+.hover\:text-\[\#333\]:hover {
+  color: #fff;
+}
+
+.hover\:text-\[\#777\]:hover {
+  color: #fff;
+}
+
+.hover\:text-\[\#000\]:hover {
+  color: #fff;
+}
+
+.lh-checkout-wrap .lh-check-bill-form .lh-bl-select-inner::after {
+  color: #bfbfc0;
+}
+
+.checkout-page [type=radio]:checked + label {
+  color: #fff;
+}
+.checkout-page [type=radio]:not(:checked) + label {
+  color: #fff;
+}
+
+.dark-opicity-1::after {
+  opacity: 0.1;
+}
+.dark-opicity-1::before {
+  opacity: 0.1;
+}
+
+.lh-side-cart .lh-menu-inner .lh-menu-box::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+.lh-side-cart .lh-menu-inner .lh-menu-box::-moz-placeholder {
+  color: #ddd;
+}
+
+.lh-side-cart .lh-menu-inner .lh-menu-box:-ms-input-placeholder {
+  color: #ddd;
+}
+
+.lh-side-cart .lh-menu-inner .lh-menu-box::-ms-input-placeholder {
+  color: #ddd;
+}
+
+.lh-side-cart .lh-menu-inner .lh-menu-box::placeholder {
+  color: #ddd;
+}
+
+.lh-room-features .lh-cols-room ul li {
+  color: #fff;
+}
+
+.lh-check-bill-form form .lh-bill-wrap label {
+  color: #bfbfc0;
+}
+
+.lh-side-reservation-from label {
+  color: #fff;
+}
+.lh-side-reservation-from .form-check .form-check-label {
+  color: #fff;
+}
+
+.darkmode-white {
+  color: #fff;
+}
+
+.dark-opicity-2::after {
+  opacity: 0.2;
+}
+.dark-opicity-2::before {
+  opacity: 0.2;
+}
+
+.dark-opicity-5::after {
+  opacity: 0.5;
+}
+.dark-opicity-5::before {
+  opacity: 0.5;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  background-color: #181d27;
+  color: #fff;
+}
+
+.lh-room button:hover {
+  color: #fff;
+}
+
+.lh-prices {
+  background-color: #181d27;
+  border: 1px solid #393e48;
+}
+
+footer .footer-top-section .lh-social-media .lh-footer-social .lh-control-footer .form-control {
+  background: #1f2531;
+  border: 1px solid #393e48 !important;
+}
+
+.nav-tabs.rooms .nav-link.active::after {
+  background-color: #1f2531;
+  border-color: #393e48;
+}
+
+.select-options {
+  background-color: #1f2531;
+  border: 1px solid #393e48;
+}
+.select-options li {
+  color: #bfbfc0;
+}
+
+.calendar input {
+  background-color: #181d27;
+  color: #fff;
+}
+
+.outline-0 {
+  outline: 0 !important;
+}
+
+.lh-side-reservation .custom-select {
+  background-color: #181d27;
+  color: #fff;
+}
+
+.lh-side-room .lh-side-reservation .lh-side-reservation-from .form-check input {
+  background-color: transparent !important;
+}
+
+.lh-amenities {
+  background-color: #262d3b !important;
+}
+
+.search-box .calendar input {
+  background-color: #1e2531 !important;
+}
+
+.ui.table,
+.ui.popup {
+  background-color: #1f2531;
+  border-color: #393e48;
+}
+.ui.table:before,
+.ui.popup:before {
+  background-color: #1f2531;
+  border-color: #393e48 !important;
+}
+.ui.table thead th,
+.ui.popup thead th {
+  background-color: #1f2531;
+  color: #bfbfc0 !important;
+}
+.ui.table tr td,
+.ui.popup tr td {
+  background-color: #1f2531;
+  color: #bfbfc0 !important;
+}
+.ui.table tr td.active,
+.ui.popup tr td.active {
+  background-color: #181d27 !important;
+  color: #bfbfc0 !important;
+}
+
+form input {
+  background-color: #181d27 !important;
+  outline: 1px solid #393e48 !important;
+}
+form textarea {
+  background-color: #181d27 !important;
+  outline: 1px solid #393e48 !important;
+}
+
+.ld-faq .accordion .accordion-item .accordion-button {
+  background-color: #1e2531;
+  color: #fff;
+}
+
+.ld-faq {
+  background-color: #1e2531;
+  border: 1px solid #393e48;
+}
+.ld-faq .accordion .accordion-item {
+  background-color: #181d27;
+}
+.ld-faq .accordion .accordion-item .accordion-button {
+  background-color: #181d27;
+}
+
+.lh-our-blog form input {
+  outline: 0 !important;
+  background-color: #1e2531 !important;
+}
+
+.lh-our-blog-tages ul li a {
+  background-color: #181d27;
+  color: #bfbfc0;
+}
+
+.lh-menu-restaurant .lh-menu-buttons {
+  background-color: #1e2531 !important;
+  border: 1px solid #393e48 !important;
+}
+
+.nav-tabs {
+  border-color: #393e48;
+}
+
+footer {
+  background-color: #2d313e !important;
+}
+/*# sourceMappingURL=dark.css.map */

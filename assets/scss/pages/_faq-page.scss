@@ -1,0 +1,38 @@
+/* Faq */
+.ld-faq {
+    box-shadow: $box-shadow;
+    .accordion {
+        .accordion-item {
+            &:not(:nth-child(1)) {
+                margin-top: 10px;
+            }
+            .accordion-button {
+                background-color: $gray_500;
+                color: $black;
+                &::after {
+                    @include ease3;
+                    background: none;
+                    font-family: 'remixicon';
+                    content: "\ea4e";
+                    font-size: 20px;
+                    line-height: 18px;
+                }
+                &:not(.collapsed) {
+                    &::after {
+                        background: none;
+                        font-family: 'remixicon';
+                        content: "\ea4e";
+                        font-size: 20px;
+                        color: $primary;
+                        line-height: 18px;
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+            .accordion-collapse {
+                border-radius: 10px;
+                visibility: visible;
+            }
+        }
+    }
+}

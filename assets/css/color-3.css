@@ -1,0 +1,91 @@
+/* Color-3 */
+.text-\[\#FF0000\] {
+  color: #d31111;
+}
+
+.bg-\[\#FF0000\] {
+  background-color: #d31111;
+}
+
+.border-\[\#FF0000\] {
+  border-color: #d31111;
+}
+
+.hover\:text-\[\#FF0000\]:hover {
+  color: #d31111;
+}
+
+.hover\:bg-\[\#FF0000\]:hover {
+  background-color: #d31111;
+}
+
+.select-options li:hover {
+  background-color: rgba(211, 17, 17, 0.1);
+}
+
+.section-testimonials svg path, .section-contact svg path, .section-amenities svg path, .section-services svg path {
+  fill: #d31111;
+}
+
+.checkout-page [type=radio]:checked + label:before {
+  border-color: #d31111;
+}
+.checkout-page [type=radio]:checked + label:after {
+  background-color: #d31111;
+}
+
+.prev-slick-img::after {
+  border: 1px solid #d31111;
+}
+
+.next-slick-img::after {
+  border: 1px solid #d31111;
+}
+
+.nav-tabs.rooms .nav-link.active::after {
+  color: #d31111;
+  border: 1px solid #d31111;
+}
+
+.lh-our-blog .lh-our-blog-categories ul li a:hover span {
+  color: #d31111;
+}
+
+ul.navbar-nav .dropdown .dropdown-menu li a:hover {
+  color: #d31111;
+}
+ul.navbar-nav li.nav-item a.nav-link:hover {
+  color: #d31111;
+}
+ul.navbar-nav li.nav-item a.nav-link:hover::before {
+  background: #d31111;
+}
+ul.navbar-nav li.nav-item a.nav-link::before {
+  background: #d31111;
+}
+
+.lh-side-room .lh-side-reservation .lh-side-reservation-from .form-check input:checked {
+  background-color: #d31111;
+  border-color: #d31111;
+}
+
+.lh-team:hover .lh-team-image {
+  border: 1px solid #d31111;
+}
+
+.lh-team:hover .lh-team-contain i {
+  color: #d31111;
+}
+
+.lh-room-contain .lh-main-features .lh-room-features .lh-cols-room ul li::marker {
+  color: #d31111;
+}
+
+.ld-faq .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+  color: #d31111;
+}
+
+.lh-menu-restaurant .nav-link.active {
+  border: 1px solid #d31111 !important;
+}
+/*# sourceMappingURL=color-3.css.map */

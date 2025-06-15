@@ -1,0 +1,39 @@
+/* Spa */
+.lh-spa-gallery {
+    &:hover {
+        &:after {
+            opacity: 1;
+            bottom: -100px;
+            right: -100px;
+        }
+        &:before {
+            opacity: 1;
+            bottom: 25px;
+            right: 25px;
+        }
+    }
+    &:after {
+        @include ease3;
+        content: "";
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: -200px;
+        right: -200px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, .5);
+        opacity: 0;
+    }
+    &:before {
+        @include ease3;
+        content: "\f0d1";
+        font-family: remixicon !important;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 28px;
+        color: $white;
+        z-index: 5;
+        opacity: 0;
+    }
+}
