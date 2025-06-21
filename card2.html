@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -156,6 +156,213 @@
                   </ul>
                   <div class="mt-auto">
                     <span class="text-xs border rounded px-2 py-1">Occupancy: 30%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="nextButton" data-lucide="arrow-right" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[hsl(var(--primary))] text-white p-2 rounded-full shadow-md cursor-pointer"></button>
+      </div>
+    </section>
+
+    <footer class="text-center mt-12 pt-8 border-t">
+      <p class="text-sm text-gray-600">&copy; 2024 Student Accommodation Services. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    lucide.createIcons({
+        attrs: {
+        stroke: 'white',
+        'stroke-width': '2.5',
+        width: '34',
+        height: '34'
+        }
+        });
+    const emblaNode = document.querySelector('.embla');
+    const viewport = emblaNode.querySelector('.embla__viewport');
+    const embla = EmblaCarousel(viewport, { loop: true });
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    prevButton.addEventListener('click', () => embla.scrollPrev());
+    nextButton.addEventListener('click', () => embla.scrollNext());
+    setInterval(() => {
+      if (embla.canScrollNext()) {
+        embla.scrollNext();
+      } else {
+        embla.scrollTo(0);
+      }
+    }, 5000);
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Accommodation Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/embla-carousel@8.1.0/embla-carousel.umd.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --background: 330 11% 95%;
+      --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 3.9%;
+      --primary: 3 76% 42%;
+      --accent: 4 71% 62%;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .embla__viewport { overflow: hidden; width: 100%; }
+    .embla__container { display: flex; }
+    .embla__slide { flex: 0 0 80%; padding-left: 1rem; min-height: 500px; }
+    .card-container { height: 500px; }
+  </style>
+</head>
+<body class="bg-[hsl(var(--background))] text-[hsl(var(--foreground))]">
+  <main class="min-h-screen container mx-auto py-8 px-4">
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-bold text-[hsl(var(--primary))] mb-2">Student Accommodation</h1>
+      <p class="text-lg text-gray-600">Find your perfect room at Nile &amp; Baze University.</p>
+    </header>
+
+    <div class="mb-8 bg-[hsl(var(--accent)/0.1)] border border-[hsl(var(--accent))] text-[hsl(var(--accent))] shadow-md p-4 rounded">
+      <p class="font-semibold">Special Offer for Returning Students!</p>
+      <p>All returning students get an automatic <span class="font-bold">10% discount</span> on accommodation fees. Welcome back!</p>
+    </div>
+
+    <section aria-labelledby="accommodation-options">
+      <h2 id="accommodation-options" class="sr-only">Available Accommodations</h2>
+      <div class="embla relative">
+        <button id="prevButton" data-lucide="arrow-left" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[hsl(var(--primary))] text-white p-2 rounded-full shadow-md cursor-pointer"></button>
+        <div class="embla__viewport">
+          <div class="embla__container">
+            <div class="embla__slide p-1">
+              <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
+                <img src="https://placehold.co/600x500.png" alt="Image of Standard Single Room" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
+                  <h3 class="text-2xl font-semibold text-white">Standard Single Room</h3>
+                  <p class="text-base text-gray-200">For Nile University Students</p>
+                  <p class="text-sm text-gray-300 flex-grow">A cozy single room perfect for focused study, available for Nile University students. This room provides a comfortable living space with all essential amenities to support your academic journey.</p>
+                  <p class="text-xl font-bold text-yellow-300">₦120,000</p>
+                  <ul class="grid grid-cols-2 gap-2 text-sm">
+                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-yellow-300"></i>WiFi</li>
+                    <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-yellow-300"></i>Power</li>
+                    <li class="flex items-center"><i data-lucide="sparkles" class="w-4 h-4 mr-2 text-yellow-300"></i>Cleaning</li>
+                  </ul>
+                  <div class="mt-auto">
+                    <span class="text-sm bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 rounded px-3 py-2 text-white">Occupancy: 65%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="embla__slide p-1">
+              <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
+                <img src="https://placehold.co/600x500.png" alt="Image of 2-Bedroom Shared Apartment" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
+                  <h3 class="text-2xl font-semibold text-white">2-Bedroom Shared Apartment</h3>
+                  <p class="text-base text-gray-200">For Baze University Students</p>
+                  <p class="text-sm text-gray-300 flex-grow">Spacious shared apartment with modern amenities for Baze University students. Perfect for those who enjoy community living while maintaining personal space and privacy.</p>
+                  <p class="text-xl font-bold text-yellow-300">₦180,000</p>
+                  <ul class="grid grid-cols-2 gap-2 text-sm">
+                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-yellow-300"></i>WiFi</li>
+                    <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-yellow-300"></i>Power</li>
+                    <li class="flex items-center"><i data-lucide="shirt" class="w-4 h-4 mr-2 text-yellow-300"></i>Laundry</li>
+                    <li class="flex items-center"><i data-lucide="sparkles" class="w-4 h-4 mr-2 text-yellow-300"></i>Cleaning</li>
+                  </ul>
+                  <div class="mt-auto">
+                    <span class="text-sm bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 rounded px-3 py-2 text-white">Occupancy: 40%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="embla__slide p-1">
+              <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
+                <img src="https://placehold.co/600x500.png" alt="Image of Deluxe Single Room" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
+                  <h3 class="text-2xl font-semibold text-white">Deluxe Single Room</h3>
+                  <p class="text-base text-gray-200">For Nile University Students</p>
+                  <p class="text-sm text-gray-300 flex-grow">Premium single room with extra space and enhanced features at Nile University. Designed for students who value comfort and additional amenities for an elevated living experience.</p>
+                  <p class="text-xl font-bold text-yellow-300">₦150,000</p>
+                  <ul class="grid grid-cols-2 gap-2 text-sm">
+                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-yellow-300"></i>WiFi</li>
+                    <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-yellow-300"></i>Power</li>
+                    <li class="flex items-center"><i data-lucide="shirt" class="w-4 h-4 mr-2 text-yellow-300"></i>Laundry</li>
+                    <li class="flex items-center"><i data-lucide="sparkles" class="w-4 h-4 mr-2 text-yellow-300"></i>Cleaning</li>
+                  </ul>
+                  <div class="mt-auto">
+                    <span class="text-sm bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 rounded px-3 py-2 text-white">Occupancy: 80%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="embla__slide p-1">
+              <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
+                <img src="https://placehold.co/600x500.png" alt="Image of Studio Apartment" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
+                  <h3 class="text-2xl font-semibold text-white">Studio Apartment</h3>
+                  <p class="text-base text-gray-200">For Baze University Students</p>
+                  <p class="text-sm text-gray-300 flex-grow">Self-contained studio apartment offering privacy and comfort for Baze students. Complete with kitchenette and private bathroom, ideal for independent living.</p>
+                  <p class="text-xl font-bold text-yellow-300">₦220,000</p>
+                  <ul class="grid grid-cols-2 gap-2 text-sm">
+                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-yellow-300"></i>WiFi</li>
+                    <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-yellow-300"></i>Power</li>
+                    <li class="flex items-center"><i data-lucide="sparkles" class="w-4 h-4 mr-2 text-yellow-300"></i>Cleaning</li>
+                    <li class="flex items-center"><i data-lucide="shirt" class="w-4 h-4 mr-2 text-yellow-300"></i>Laundry</li>
+                  </ul>
+                  <div class="mt-auto">
+                    <span class="text-sm bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 rounded px-3 py-2 text-white">Occupancy: 55%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="embla__slide p-1">
+              <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
+                <img src="./assets/img/madiba/2-2.jpg" alt="Image of Shared Twin Room" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
+                  <h3 class="text-2xl font-semibold text-white">Shared Twin Room</h3>
+                  <p class="text-base text-gray-200">For Nile University Students</p>
+                  <p class="text-sm text-gray-300 flex-grow">Affordable shared twin room for students at Nile University seeking a communal experience. Great for building friendships while keeping accommodation costs low.</p>
+                  <p class="text-xl font-bold text-yellow-300">₦90,000</p>
+                  <ul class="grid grid-cols-2 gap-2 text-sm">
+                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-yellow-300"></i>WiFi</li>
+                    <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-yellow-300"></i>Power</li>
+                  </ul>
+                  <div class="mt-auto">
+                    <span class="text-sm bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 rounded px-3 py-2 text-white">Occupancy: 90%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="embla__slide p-1">
+              <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
+                <img src="https://placehold.co/600x500.png" alt="Image of Premium Single Suite" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
+                  <h3 class="text-2xl font-semibold text-white">Premium Single Suite</h3>
+                  <p class="text-base text-gray-200">For Baze University Students</p>
+                  <p class="text-sm text-gray-300 flex-grow">Exclusive single suite with top-tier amenities for discerning Baze University students. Luxury accommodation featuring premium furnishings and exceptional service standards.</p>
+                  <p class="text-xl font-bold text-yellow-300">₦250,000</p>
+                  <ul class="grid grid-cols-2 gap-2 text-sm">
+                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-yellow-300"></i>WiFi</li>
+                    <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-yellow-300"></i>Power</li>
+                    <li class="flex items-center"><i data-lucide="shirt" class="w-4 h-4 mr-2 text-yellow-300"></i>Laundry</li>
+                    <li class="flex items-center"><i data-lucide="sparkles" class="w-4 h-4 mr-2 text-yellow-300"></i>Cleaning</li>
+                  </ul>
+                  <div class="mt-auto">
+                    <span class="text-sm bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 rounded px-3 py-2 text-white">Occupancy: 30%</span>
                   </div>
                 </div>
               </div>
