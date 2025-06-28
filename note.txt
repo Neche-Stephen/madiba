@@ -1,0 +1,4 @@
+Do we need a services page, it is present.
+Add room details, so that on clicking a room, user gets navigated there. 
+Above might mean students need to click on room card, meaning a button is needed there. 
+Add FAQ to a section of the site. There is a page for it alreadu
