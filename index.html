@@ -81,6 +81,16 @@
         }
       }
       .card-container { height: 500px; }
+      .custom_pricing:hover {
+        background-image: linear-gradient(to right, #dc2626, #b91c1c) !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+      }
+      .custom_pricing {
+        text-decoration: none;
+      }
+      .custom_pricing:hover {
+        color: white;
+      }
     </style>
   </head>
 
@@ -556,421 +566,34 @@
         <div class="embla relative">
           <button id="prevButton" data-lucide="arrow-left" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[hsl(var(--primary))] text-white p-2 rounded-full shadow-md cursor-pointer"></button>
           <div class="embla__viewport">
-            <div class="embla__container">
-              <!-- <div class="embla__slide p-1">
-                <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
-                  <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Image of Executive Room" alt="Image of Standard Single Room" class="absolute inset-0 w-full h-full object-cover">
-                  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                  <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
-                  <div class="flex justify-between items-center gap-2">
-                    <h3 class="text-2xl font-semibold text-white">Executive Room</h3>
-                    <div class="flex items-center text-sm bg-white bg-opacity-20 rounded-full px-2 py-1">
-                        <i data-lucide="users" style="stroke: #ff0000;" class="w-4 h-4 mr-1"></i>
-                        <span>2 People</span>
-                    </div>
-                </div>
-           
-                    <p class="text-sm text-gray-300 flex-grow">A cozy single room perfect for focused study, available for Nile University students. <span class="hidden md:inline">This room provides a comfortable living space with all essential amenities to support your academic journey.</span></p>
-                    <p class="md:text-[14px] text-red-100">₦120,000 - <span class="text-white">Nile University Students</span></p>
-                    <p class="md:text-[14px] text-red-100">₦140,000 - <span class="text-white">Baze University Students</span></p>
-                    <ul class="grid grid-cols-2 gap-2 text-[12px]">
-                      <li class="flex items-center text-white text-[12px]"><i data-lucide="wifi" style=" stroke: #ff0000;" class="w-4 h-4 mr-2"></i>WiFi</li>
-                      <li class="flex items-center text-white text-[12px]"><i data-lucide="zap" style=" stroke: #ff0000;" class="w-4 h-4 mr-2"></i>Power</li>
-                      <li class="flex items-center text-white text-[12px]"><i data-lucide="sparkles" style=" stroke: #ff0000;" class="w-4 h-4 mr-2"></i>Cleaning</li>
-                      <li class="flex items-center text-white text-[12px]"><i data-lucide="sparkles" style=" stroke: #ff0000;" class="w-4 h-4 mr-2"></i>Laundry</li>
-                    </ul>
-                    <div class="mt-auto">
-                      <span class="text-sm bg-green-50 bg-opacity-20 backdrop-blur-sm border border-green-200 border-opacity-30 rounded px-3 py-2 text-white">10% discount for returning students</span>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-              
-              <!-- Claudes -->
-              <div class="embla__slide p-1">
-                <div class="card-container relative overflow-hidden rounded-xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:-translate-y-1 bg-white border border-gray-200">
-                    <img src="./assets/img/madiba/3.jpg" alt="Image of Executive Room" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-br from-black/30 via-black/50 to-black/70"></div>
-                    <div class="relative z-10 p-6 space-y-4 flex flex-col h-full text-white">
-                        <div class="flex justify-between items-start gap-3">
-                            <h3 class="text-2xl font-bold text-white drop-shadow-lg">Executive Room</h3>
-                            <div class="flex items-center text-sm bg-white/25 backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/20">
-                                <i data-lucide="users" class="w-4 h-4 mr-1.5 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">2 People</span>
-                            </div>
-                        </div>
-                   
-                        <p class="text-sm text-gray-100 flex-grow leading-relaxed drop-shadow-sm">
-                            A cozy single room perfect for focused study, available for Nile University students. 
-                            <span class="hidden md:inline">This room provides a comfortable living space with all essential amenities to support your academic journey.</span>
-                        </p>
-                        
-                        <div class="space-y-2 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-                            <p class="text-sm font-semibold">
-                                <span class="text-red-300 drop-shadow-sm">₦120,000</span> - <span class="text-white">Nile University Students</span>
-                            </p>
-                            <p class="text-sm font-semibold">
-                                <span class="text-red-300 drop-shadow-sm">₦140,000</span> - <span class="text-white">Baze University Students</span>
-                            </p>
-                        </div>
-                        
-                        <ul class="grid grid-cols-2 gap-3 text-xs">
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="wifi" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">WiFi</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="zap" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">24/7 Power</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="sparkles" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">Cleaning</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="shirt" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">Laundry</span>
-                            </li>
-                        </ul>
-                        
-                        <div class="mt-auto pt-2">
-                            <span class="inline-flex items-center text-sm bg-gradient-to-r from-green-400 to-green-500 backdrop-blur-sm border border-green-300/50 rounded-full px-4 py-2 text-white font-semibold shadow-lg">
-                                <i data-lucide="percent" class="w-3 h-3 mr-1"></i>
-                                10% discount for returning students
-                            </span>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <div class="embla__slide p-1">
-                <div class="card-container relative overflow-hidden rounded-xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:-translate-y-1 bg-white border border-gray-200">
-                    <img src="./assets/img/madiba/3.jpg" alt="Image of Executive Room" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-br from-black/30 via-black/50 to-black/70"></div>
-                    <div class="relative z-10 p-6 space-y-4 flex flex-col h-full text-white">
-                        <div class="flex justify-between items-start gap-3">
-                            <h3 class="text-2xl font-bold text-white drop-shadow-lg">Executive Room</h3>
-                            <div class="flex items-center text-sm bg-white/25 backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/20">
-                                <i data-lucide="users" class="w-4 h-4 mr-1.5 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">2 People</span>
-                            </div>
-                        </div>
-                  
-                        <p class="text-sm text-gray-100 flex-grow leading-relaxed drop-shadow-sm">
-                            A cozy single room perfect for focused study, available for Nile University students. 
-                            <span class="hidden md:inline">This room provides a comfortable living space with all essential amenities to support your academic journey.</span>
-                        </p>
-                        
-                        <div class="space-y-2 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-                            <p class="text-sm font-semibold">
-                                <span class="text-red-300 drop-shadow-sm">₦120,000</span> - <span class="text-white">Nile University Students</span>
-                            </p>
-                            <p class="text-sm font-semibold">
-                                <span class="text-red-300 drop-shadow-sm">₦140,000</span> - <span class="text-white">Baze University Students</span>
-                            </p>
-                        </div>
-                        
-                        <ul class="grid grid-cols-2 gap-3 text-xs">
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="wifi" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">WiFi</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="zap" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">24/7 Power</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="sparkles" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">Cleaning</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="shirt" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">Laundry</span>
-                            </li>
-                        </ul>
-                        
-                        <div class="mt-auto pt-2">
-                            <span class="inline-flex items-center text-sm bg-gradient-to-r from-green-400 to-green-500 backdrop-blur-sm border border-green-300/50 rounded-full px-4 py-2 text-white font-semibold shadow-lg">
-                                <i data-lucide="percent" class="w-3 h-3 mr-1"></i>
-                                10% discount for returning students
-                            </span>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <div class="embla__slide p-1">
-                <div class="card-container relative overflow-hidden rounded-xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:-translate-y-1 bg-white border border-gray-200">
-                    <img src="./assets/img/madiba/3.jpg" alt="Image of Executive Room" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-br from-black/30 via-black/50 to-black/70"></div>
-                    <div class="relative z-10 p-6 space-y-4 flex flex-col h-full text-white">
-                        <div class="flex justify-between items-start gap-3">
-                            <h3 class="text-2xl font-bold text-white drop-shadow-lg">Executive Room</h3>
-                            <div class="flex items-center text-sm bg-white/25 backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/20">
-                                <i data-lucide="users" class="w-4 h-4 mr-1.5 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">2 People</span>
-                            </div>
-                        </div>
-                   
-                        <p class="text-sm text-gray-100 flex-grow leading-relaxed drop-shadow-sm">
-                            A cozy single room perfect for focused study, available for Nile University students. 
-                            <span class="hidden md:inline">This room provides a comfortable living space with all essential amenities to support your academic journey.</span>
-                        </p>
-                        
-                        <div class="space-y-2 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-                            <p class="text-sm font-semibold">
-                                <span class="text-red-300 drop-shadow-sm">₦120,000</span> - <span class="text-white">Nile University Students</span>
-                            </p>
-                            <p class="text-sm font-semibold">
-                                <span class="text-red-300 drop-shadow-sm">₦140,000</span> - <span class="text-white">Baze University Students</span>
-                            </p>
-                        </div>
-                        
-                        <ul class="grid grid-cols-2 gap-3 text-xs">
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="wifi" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">WiFi</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="zap" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">24/7 Power</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="sparkles" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">Cleaning</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="shirt" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">Laundry</span>
-                            </li>
-                        </ul>
-                        
-                        <div class="mt-auto pt-2">
-                            <span class="inline-flex items-center text-sm bg-gradient-to-r from-green-400 to-green-500 backdrop-blur-sm border border-green-300/50 rounded-full px-4 py-2 text-white font-semibold shadow-lg">
-                                <i data-lucide="percent" class="w-3 h-3 mr-1"></i>
-                                10% discount for returning students
-                            </span>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <div class="embla__slide p-1">
-                <div class="card-container relative overflow-hidden rounded-xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:-translate-y-1 bg-white border border-gray-200">
-                    <img src="./assets/img/madiba/3.jpg" alt="Image of Executive Room" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-br from-black/30 via-black/50 to-black/70"></div>
-                    <div class="relative z-10 p-6 space-y-4 flex flex-col h-full text-white">
-                        <div class="flex justify-between items-start gap-3">
-                            <h3 class="text-2xl font-bold text-white drop-shadow-lg">Executive Room</h3>
-                            <div class="flex items-center text-sm bg-white/25 backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/20">
-                                <i data-lucide="users" class="w-4 h-4 mr-1.5 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">2 People</span>
-                            </div>
-                        </div>
-                   
-                        <p class="text-sm text-gray-100 flex-grow leading-relaxed drop-shadow-sm">
-                            A cozy single room perfect for focused study, available for Nile University students. 
-                            <span class="hidden md:inline">This room provides a comfortable living space with all essential amenities to support your academic journey.</span>
-                        </p>
-                        
-                        <div class="space-y-2 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-                            <p class="text-sm font-semibold">
-                                <span class="text-red-300 drop-shadow-sm">₦120,000</span> - <span class="text-white">Nile University Students</span>
-                            </p>
-                            <p class="text-sm font-semibold">
-                                <span class="text-red-300 drop-shadow-sm">₦140,000</span> - <span class="text-white">Baze University Students</span>
-                            </p>
-                        </div>
-                        
-                        <ul class="grid grid-cols-2 gap-3 text-xs">
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="wifi" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">WiFi</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="zap" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">24/7 Power</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="sparkles" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">Cleaning</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="shirt" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">Laundry</span>
-                            </li>
-                        </ul>
-                        
-                        <div class="mt-auto pt-2">
-                            <span class="inline-flex items-center text-sm bg-gradient-to-r from-green-400 to-green-500 backdrop-blur-sm border border-green-300/50 rounded-full px-4 py-2 text-white font-semibold shadow-lg">
-                                <i data-lucide="percent" class="w-3 h-3 mr-1"></i>
-                                10% discount for returning students
-                            </span>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <div class="embla__slide p-1">
-                <div class="card-container relative overflow-hidden rounded-xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:-translate-y-1 bg-white border border-gray-200">
-                    <img src="./assets/img/madiba/3.jpg" alt="Image of Executive Room" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-br from-black/30 via-black/50 to-black/70"></div>
-                    <div class="relative z-10 p-6 space-y-4 flex flex-col h-full text-white">
-                        <div class="flex justify-between items-start gap-3">
-                            <h3 class="text-2xl font-bold text-white drop-shadow-lg">Executive Room</h3>
-                            <div class="flex items-center text-sm bg-white/25 backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/20">
-                                <i data-lucide="users" class="w-4 h-4 mr-1.5 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">2 People</span>
-                            </div>
-                        </div>
-                   
-                        <p class="text-sm text-gray-100 flex-grow leading-relaxed drop-shadow-sm">
-                            A cozy single room perfect for focused study, available for Nile University students. 
-                            <span class="hidden md:inline">This room provides a comfortable living space with all essential amenities to support your academic journey.</span>
-                        </p>
-                        
-                        <div class="space-y-2 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-                            <p class="text-sm font-semibold">
-                                <span class="text-red-300 drop-shadow-sm">₦120,000</span> - <span class="text-white">Nile University Students</span>
-                            </p>
-                            <p class="text-sm font-semibold">
-                                <span class="text-red-300 drop-shadow-sm">₦140,000</span> - <span class="text-white">Baze University Students</span>
-                            </p>
-                        </div>
-                        
-                        <ul class="grid grid-cols-2 gap-3 text-xs">
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="wifi" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">WiFi</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="zap" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">24/7 Power</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="sparkles" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">Cleaning</span>
-                            </li>
-                            <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
-                                <i data-lucide="shirt" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
-                                <span class="font-medium">Laundry</span>
-                            </li>
-                        </ul>
-                        
-                        <div class="mt-auto pt-2">
-                            <span class="inline-flex items-center text-sm bg-gradient-to-r from-green-400 to-green-500 backdrop-blur-sm border border-green-300/50 rounded-full px-4 py-2 text-white font-semibold shadow-lg">
-                                <i data-lucide="percent" class="w-3 h-3 mr-1"></i>
-                                10% discount for returning students
-                            </span>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <!-- <div class="embla__slide p-1">
-                <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
-                  <img src="./assets/img/madiba/4.jpg" alt="Image of 2-Bedroom Shared Apartment" class="absolute inset-0 w-full h-full object-cover">
-                  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                  <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
-                    <h3 class="text-2xl font-semibold text-white">2-Bedroom Shared Apartment</h3>
-                    <p class="text-base text-gray-200">For Baze University Students</p>
-                    <p class="text-sm text-gray-300 flex-grow">Spacious shared apartment with modern amenities for Baze University students. Perfect for those who enjoy community living while maintaining personal space and privacy.</p>
-                    <p class="text-xl font-bold text-yellow-300">₦180,000</p>
-                    <ul class="grid grid-cols-2 gap-2 text-sm">
-                      <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-yellow-300"></i>WiFi</li>
-                      <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-yellow-300"></i>Power</li>
-                      <li class="flex items-center"><i data-lucide="shirt" class="w-4 h-4 mr-2 text-yellow-300"></i>Laundry</li>
-                      <li class="flex items-center"><i data-lucide="sparkles" class="w-4 h-4 mr-2 text-yellow-300"></i>Cleaning</li>
-                    </ul>
-                    <div class="mt-auto">
-                      <span class="text-sm bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 rounded px-3 py-2 text-white">Occupancy: 40%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="embla__slide p-1">
-                <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
-                  <img src="./assets/img/madiba/5.jpg" alt="Image of Deluxe Single Room" class="absolute inset-0 w-full h-full object-cover">
-                  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                  <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
-                    <h3 class="text-2xl font-semibold text-white">Deluxe Single Room</h3>
-                    <p class="text-base text-gray-200">For Nile University Students</p>
-                    <p class="text-sm text-gray-300 flex-grow">Premium single room with extra space and enhanced features at Nile University. Designed for students who value comfort and additional amenities for an elevated living experience.</p>
-                    <p class="text-xl font-bold text-yellow-300">₦150,000</p>
-                    <ul class="grid grid-cols-2 gap-2 text-sm">
-                      <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-yellow-300"></i>WiFi</li>
-                      <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-yellow-300"></i>Power</li>
-                      <li class="flex items-center"><i data-lucide="shirt" class="w-4 h-4 mr-2 text-yellow-300"></i>Laundry</li>
-                      <li class="flex items-center"><i data-lucide="sparkles" class="w-4 h-4 mr-2 text-yellow-300"></i>Cleaning</li>
-                    </ul>
-                    <div class="mt-auto">
-                      <span class="text-sm bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 rounded px-3 py-2 text-white">Occupancy: 80%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="embla__slide p-1">
-                <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
-                  <img src="./assets/img/madiba/6.jpg" alt="Image of Studio Apartment" class="absolute inset-0 w-full h-full object-cover">
-                  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                  <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
-                    <h3 class="text-2xl font-semibold text-white">Studio Apartment</h3>
-                    <p class="text-base text-gray-200">For Baze University Students</p>
-                    <p class="text-sm text-gray-300 flex-grow">Self-contained studio apartment offering privacy and comfort for Baze students. Complete with kitchenette and private bathroom, ideal for independent living.</p>
-                    <p class="text-xl font-bold text-yellow-300">₦220,000</p>
-                    <ul class="grid grid-cols-2 gap-2 text-sm">
-                      <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-yellow-300"></i>WiFi</li>
-                      <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-yellow-300"></i>Power</li>
-                      <li class="flex items-center"><i data-lucide="sparkles" class="w-4 h-4 mr-2 text-yellow-300"></i>Cleaning</li>
-                      <li class="flex items-center"><i data-lucide="shirt" class="w-4 h-4 mr-2 text-yellow-300"></i>Laundry</li>
-                    </ul>
-                    <div class="mt-auto">
-                      <span class="text-sm bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 rounded px-3 py-2 text-white">Occupancy: 55%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="embla__slide p-1">
-                <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
-                  <img src="./assets/img/madiba/2.jpg" alt="Image of Shared Twin Room" class="absolute inset-0 w-full h-full object-cover">
-                  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                  <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
-                    <h3 class="text-2xl font-semibold text-white">Shared Twin Room</h3>
-                    <p class="text-base text-gray-200">For Nile University Students</p>
-                    <p class="text-sm text-gray-300 flex-grow">Affordable shared twin room for students at Nile University seeking a communal experience. Great for building friendships while keeping accommodation costs low.</p>
-                    <p class="text-xl font-bold text-yellow-300">₦90,000</p>
-                    <ul class="grid grid-cols-2 gap-2 text-sm">
-                      <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-yellow-300"></i>WiFi</li>
-                      <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-yellow-300"></i>Power</li>
-                    </ul>
-                    <div class="mt-auto">
-                      <span class="text-sm bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 rounded px-3 py-2 text-white">Occupancy: 90%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="embla__slide p-1">
-                <div class="card-container relative overflow-hidden rounded-lg shadow-lg transition-shadow hover:shadow-xl bg-white">
-                  <img src="./assets/img/madiba/7.jpg" alt="Image of Premium Single Suite" class="absolute inset-0 w-full h-full object-cover">
-                  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                  <div class="relative z-10 p-6 space-y-3 flex flex-col h-full text-white">
-                    <h3 class="text-2xl font-semibold text-white">Premium Single Suite</h3>
-                    <p class="text-base text-gray-200">For Baze University Students</p>
-                    <p class="text-sm text-gray-300 flex-grow">Exclusive single suite with top-tier amenities for discerning Baze University students. Luxury accommodation featuring premium furnishings and exceptional service standards.</p>
-                    <p class="text-xl font-bold text-yellow-300">₦250,000</p>
-                    <ul class="grid grid-cols-2 gap-2 text-sm">
-                      <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-yellow-300"></i>WiFi</li>
-                      <li class="flex items-center"><i data-lucide="zap" class="w-4 h-4 mr-2 text-yellow-300"></i>Power</li>
-                      <li class="flex items-center"><i data-lucide="shirt" class="w-4 h-4 mr-2 text-yellow-300"></i>Laundry</li>
-                      <li class="flex items-center"><i data-lucide="sparkles" class="w-4 h-4 mr-2 text-yellow-300"></i>Cleaning</li>
-                    </ul>
-                    <div class="mt-auto">
-                      <span class="text-sm bg-white bg-opacity-20 backdrop-blur-sm border border-white border-opacity-30 rounded px-3 py-2 text-white">Occupancy: 30%</span>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
+            <div id="slidesContainer" class="embla__container">
+       
             </div>
           </div>
           <button id="nextButton" data-lucide="arrow-right" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[hsl(var(--primary))] text-white p-2 rounded-full shadow-md cursor-pointer"></button>
         </div>
-      </section>
+    </section>
 
+    <!-- Other Students -->
+    <div class="mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-w-[90%] my-12 bg-white border border-red-100 rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div class="inline-flex items-center justify-center mb-4 p-3 rounded-full bg-red-50">
+        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+      </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Attending Another University?</h3>
+      <p class="text-gray-600 mb-4">
+          We welcome all students. Contact us for personalized rates and availability.
+      </p>
+      <a href="contact.html" class="custom_pricing inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md">
+        Contact for Pricing
+        <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"/>
+        </svg>
+      </a>
+  </div>
+
+      
     <!-- Room -->
    
     <!-- About -->
@@ -1481,7 +1104,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="lg:w-1/2 w-full px-[12px] mb-[24px] lg:order-[2] order-[1]">
+                    <div class="lg:w-1/2 w-full sm:px-[12px] mb-[24px] lg:order-[2] order-[1]">
                         <div class="lh-social-media h-full lg:border-x-[1px] lg:border-b-[0] md:border-b-[1px] border-b-[0] lg:pb-[0] md:pb-[30px] pb-[0] border-solid border-[#808384]">
                             <div class="footer-logos flex md:justify-center justify-start bg-[white]">
                                 <!-- <img src="assets/img/logo/logo.png" alt="logo" class="w-[180px]"> -->
@@ -1681,20 +1304,6 @@
         height: '34'
         }
         });
-    const emblaNode = document.querySelector('.embla');
-    const viewport = emblaNode.querySelector('.embla__viewport');
-    const embla = EmblaCarousel(viewport, { loop: true });
-    const prevButton = document.getElementById('prevButton');
-    const nextButton = document.getElementById('nextButton');
-    prevButton.addEventListener('click', () => embla.scrollPrev());
-    nextButton.addEventListener('click', () => embla.scrollNext());
-    setInterval(() => {
-      if (embla.canScrollNext()) {
-        embla.scrollNext();
-      } else {
-        embla.scrollTo(0);
-      }
-    }, 5000);
   </script>
   <!-- Plugins JS -->
   <script src="assets/js/vendor/jquery.min.js"></script>
@@ -1708,4 +1317,6 @@
 
   <!-- main style -->
   <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/accomodation.js"></script>
 </html>
