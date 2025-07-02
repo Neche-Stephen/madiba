@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+  <g>
+    <!-- Main Solar Panel Frame -->
+    <rect x="80" y="140" width="352" height="200" rx="12" ry="12" fill="none" stroke="#FF0000" stroke-width="8"/>
+    
+    <!-- Solar Panel Grid Lines -->
+    <line x1="168" y1="140" x2="168" y2="340" stroke="#FF0000" stroke-width="6"/>
+    <line x1="256" y1="140" x2="256" y2="340" stroke="#FF0000" stroke-width="6"/>
+    <line x1="344" y1="140" x2="344" y2="340" stroke="#FF0000" stroke-width="6"/>
+    
+    <line x1="80" y1="190" x2="432" y2="190" stroke="#FF0000" stroke-width="6"/>
+    <line x1="80" y1="240" x2="432" y2="240" stroke="#FF0000" stroke-width="6"/>
+    <line x1="80" y1="290" x2="432" y2="290" stroke="#FF0000" stroke-width="6"/>
+    
+    <!-- Sun with rays -->
+    <circle cx="256" cy="70" r="30" fill="none" stroke="#FF0000" stroke-width="8"/>
+    <path d="M256 20 L256 40 M305 25 L291 39 M330 70 L310 70 M305 115 L291 101 M256 120 L256 100 M207 115 L221 101 M182 70 L202 70 M207 25 L221 39" stroke="#FF0000" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Power cable -->
+    <path d="M256 340 Q256 400 180 450" fill="none" stroke="#FF0000" stroke-width="12"/>
+    
+    <!-- Power plug -->
+    <rect x="140" y="430" width="80" height="40" rx="20" ry="20" fill="none" stroke="#FF0000" stroke-width="8"/>
+    <rect x="160" y="410" width="12" height="25" fill="#FF0000"/>
+    <rect x="188" y="410" width="12" height="25" fill="#FF0000"/>
+    <rect x="216" y="410" width="12" height="25" fill="#FF0000"/>
+    
+    <!-- Lightning bolt on panel -->
+    <path d="M235 200 L215 240 L235 240 L215 280 L255 240 L235 240 L255 200 Z" fill="#FF0000"/>
+    
+    <!-- Support legs -->
+    <line x1="150" y1="340" x2="150" y2="420" stroke="#FF0000" stroke-width="10"/>
+    <line x1="362" y1="340" x2="362" y2="420" stroke="#FF0000" stroke-width="10"/>
+    <line x1="120" y1="420" x2="392" y2="420" stroke="#FF0000" stroke-width="10"/>
+  </g>
+</svg>

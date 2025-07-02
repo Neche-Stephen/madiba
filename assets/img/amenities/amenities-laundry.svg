@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+  <g>
+    <!-- Main washing machine body -->
+    <path d="M416 64H96c-17.673 0-32 14.327-32 32v320c0 17.673 14.327 32 32 32h320c17.673 0 32-14.327 32-32V96c0-17.673-14.327-32-32-32zM433 416c0 9.389-7.611 17-17 17H96c-9.389 0-17-7.611-17-17V96c0-9.389 7.611-17 17-17h320c9.389 0 17 7.611 17 17v320z" fill="#FF0000" opacity="1"/>
+    
+    <!-- Control panel area -->
+    <path d="M96 79h320c9.389 0 17 7.611 17 17v48c0 4.418-3.582 8-8 8H87c-4.418 0-8-3.582-8-8v-48c0-9.389 7.611-17 17-17z" fill="#FF0000" opacity="1"/>
+    
+    <!-- Control buttons -->
+    <circle cx="120" cy="120" r="12" fill="#FF0000" opacity="1"/>
+    <circle cx="160" cy="120" r="12" fill="#FF0000" opacity="1"/>
+    
+    <!-- Display screen -->
+    <rect x="240" y="108" width="120" height="24" rx="4" fill="#FF0000" opacity="1"/>
+    
+    <!-- Main drum/door -->
+    <circle cx="256" cy="280" r="120" fill="none" stroke="#FF0000" stroke-width="15" opacity="1"/>
+    
+    <!-- Door handle -->
+    <path d="M376 280c0-4.418 3.582-8 8-8h24c4.418 0 8 3.582 8 8s-3.582 8-8 8h-24c-4.418 0-8-3.582-8-8z" fill="#FF0000" opacity="1"/>
+    
+    <!-- Inner drum details -->
+    <circle cx="256" cy="280" r="80" fill="none" stroke="#FF0000" stroke-width="8" opacity="1"/>
+    
+    <!-- Drum holes pattern -->
+    <circle cx="220" cy="250" r="4" fill="#FF0000" opacity="1"/>
+    <circle cx="240" cy="240" r="4" fill="#FF0000" opacity="1"/>
+    <circle cx="260" cy="240" r="4" fill="#FF0000" opacity="1"/>
+    <circle cx="280" cy="250" r="4" fill="#FF0000" opacity="1"/>
+    <circle cx="292" cy="270" r="4" fill="#FF0000" opacity="1"/>
+    <circle cx="292" cy="290" r="4" fill="#FF0000" opacity="1"/>
+    <circle cx="280" cy="310" r="4" fill="#FF0000" opacity="1"/>
+    <circle cx="260" cy="320" r="4" fill="#FF0000" opacity="1"/>
+    <circle cx="240" cy="320" r="4" fill="#FF0000" opacity="1"/>
+    <circle cx="220" cy="310" r="4" fill="#FF0000" opacity="1"/>
+    <circle cx="208" cy="290" r="4" fill="#FF0000" opacity="1"/>
+    <circle cx="208" cy="270" r="4" fill="#FF0000" opacity="1"/>
+    
+    <!-- Water level indicator -->
+    <path d="M256 220c-33.137 0-60 26.863-60 60 0 8.284 6.716 15 15 15s15-6.716 15-15c0-16.569 13.431-30 30-30s30 13.431 30 30c0 8.284 6.716 15 15 15s15-6.716 15-15c0-33.137-26.863-60-60-60z" fill="#FF0000" opacity="1"/>
+  </g>
+</svg>

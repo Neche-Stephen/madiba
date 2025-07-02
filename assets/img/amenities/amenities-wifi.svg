@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+  <g>
+    <!-- Outermost WiFi arc -->
+    <path d="M256 64C132.288 64 32 164.288 32 288c0 4.418 3.582 8 8 8s8-3.582 8-8c0-115.431 93.569-209 208-209s208 93.569 208 209c0 4.418 3.582 8 8 8s8-3.582 8-8c0-123.712-100.288-224-224-224z" fill="#FF0000" opacity="1"/>
+    
+    <!-- Second WiFi arc -->
+    <path d="M256 128c-88.366 0-160 71.634-160 160c0 4.418 3.582 8 8 8s8-3.582 8-8c0-79.529 64.471-144 144-144s144 64.471 144 144c0 4.418 3.582 8 8 8s8-3.582 8-8c0-88.366-71.634-160-160-160z" fill="#FF0000" opacity="1"/>
+    
+    <!-- Third WiFi arc -->
+    <path d="M256 192c-53.019 0-96 42.981-96 96c0 4.418 3.582 8 8 8s8-3.582 8-8c0-44.183 35.817-80 80-80s80 35.817 80 80c0 4.418 3.582 8 8 8s8-3.582 8-8c0-53.019-42.981-96-96-96z" fill="#FF0000" opacity="1"/>
+    
+    <!-- Fourth WiFi arc -->
+    <path d="M256 256c-17.673 0-32 14.327-32 32c0 4.418 3.582 8 8 8s8-3.582 8-8c0-8.837 7.163-16 16-16s16 7.163 16 16c0 4.418 3.582 8 8 8s8-3.582 8-8c0-17.673-14.327-32-32-32z" fill="#FF0000" opacity="1"/>
+    
+    <!-- Center dot -->
+    <circle cx="256" cy="320" r="16" fill="#FF0000" opacity="1"/>
+    
+    <!-- "FREE" text indicator -->
+    <rect x="180" y="380" width="20" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="180" y="388" width="16" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="180" y="396" width="20" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="180" y="404" width="4" height="12" fill="#FF0000" opacity="1"/>
+    
+    <rect x="210" y="380" width="20" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="210" y="388" width="16" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="210" y="396" width="8" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="210" y="404" width="4" height="12" fill="#FF0000" opacity="1"/>
+    <rect x="222" y="404" width="4" height="12" fill="#FF0000" opacity="1"/>
+    
+    <rect x="240" y="380" width="20" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="240" y="388" width="20" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="240" y="396" width="20" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="240" y="404" width="4" height="12" fill="#FF0000" opacity="1"/>
+    <rect x="256" y="404" width="4" height="12" fill="#FF0000" opacity="1"/>
+    
+    <rect x="270" y="380" width="20" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="270" y="388" width="20" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="270" y="396" width="20" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="270" y="404" width="4" height="12" fill="#FF0000" opacity="1"/>
+    <rect x="286" y="404" width="4" height="12" fill="#FF0000" opacity="1"/>
+    
+    <!-- "24HR" indicator -->
+    <rect x="320" y="380" width="12" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="320" y="388" width="8" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="320" y="396" width="12" height="4" fill="#FF0000" opacity="1"/>
+    <rect x="320" y="404" width="4" height="12" fill="#FF0000" opacity="1"/>
+    <rect x="328" y="404" width="4" height="12" fill="#FF0000" opacity="1"/>
+    
+    <rect x="340" y="380" width="4" height="36" fill="#FF0000" opacity="1"/>
+    <rect x="348" y="380" width="4" height="16" fill="#FF0000" opacity="1"/>
+    <rect x="348" y="404" width="4" height="12" fill="#FF0000" opacity="1"/>
+  </g>
+</svg>

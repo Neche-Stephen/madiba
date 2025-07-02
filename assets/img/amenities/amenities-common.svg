@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+  <g>
+    <!-- Sofa backrest -->
+    <rect x="40" y="120" width="432" height="140" rx="20" ry="20" fill="none" stroke="#FF0000" stroke-width="8"/>
+    
+    <!-- Sofa seat -->
+    <rect x="60" y="200" width="392" height="100" rx="15" ry="15" fill="none" stroke="#FF0000" stroke-width="8"/>
+    
+    <!-- Left armrest -->
+    <rect x="20" y="150" width="70" height="150" rx="15" ry="15" fill="none" stroke="#FF0000" stroke-width="8"/>
+    
+    <!-- Right armrest -->
+    <rect x="422" y="150" width="70" height="150" rx="15" ry="15" fill="none" stroke="#FF0000" stroke-width="8"/>
+    
+    <!-- Cushion divisions -->
+    <line x1="160" y1="200" x2="160" y2="300" stroke="#FF0000" stroke-width="6"/>
+    <line x1="256" y1="200" x2="256" y2="300" stroke="#FF0000" stroke-width="6"/>
+    <line x1="352" y1="200" x2="352" y2="300" stroke="#FF0000" stroke-width="6"/>
+    
+    <!-- Backrest cushions -->
+    <line x1="140" y1="130" x2="140" y2="200" stroke="#FF0000" stroke-width="6"/>
+    <line x1="220" y1="130" x2="220" y2="200" stroke="#FF0000" stroke-width="6"/>
+    <line x1="292" y1="130" x2="292" y2="200" stroke="#FF0000" stroke-width="6"/>
+    <line x1="372" y1="130" x2="372" y2="200" stroke="#FF0000" stroke-width="6"/>
+    
+    <!-- Sofa legs -->
+    <rect x="80" y="300" width="14" height="45" fill="#FF0000"/>
+    <rect x="140" y="300" width="14" height="45" fill="#FF0000"/>
+    <rect x="358" y="300" width="14" height="45" fill="#FF0000"/>
+    <rect x="418" y="300" width="14" height="45" fill="#FF0000"/>
+    
+    <!-- Coffee table -->
+    <rect x="140" y="380" width="232" height="70" rx="8" ry="8" fill="none" stroke="#FF0000" stroke-width="6"/>
+    
+    <!-- Coffee table legs -->
+    <line x1="165" y1="450" x2="165" y2="470" stroke="#FF0000" stroke-width="6"/>
+    <line x1="347" y1="450" x2="347" y2="470" stroke="#FF0000" stroke-width="6"/>
+    
+    <!-- Decorative elements on coffee table -->
+    <circle cx="200" cy="415" r="10" fill="none" stroke="#FF0000" stroke-width="4"/>
+    <rect x="280" y="405" width="50" height="20" rx="4" ry="4" fill="none" stroke="#FF0000" stroke-width="4"/>
+  </g>
+</svg>

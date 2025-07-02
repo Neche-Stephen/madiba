@@ -4,7 +4,7 @@
      // Executive Room of 1
      {
         title: "Executive Room",
-        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop",
+        image: "assets/img/madiba-rooms/exec1.jpg",
         imageAlt: "Image of Executive Room",
         capacity: 1,
         capacityIcon: "user",
@@ -17,7 +17,7 @@
             { icon: "wifi", label: "WiFi" },
             { icon: "zap", label: "24/7 Power" },
             { icon: "sparkles", label: "Cleaning" },
-            { icon: "coffee", label: "Study Desk" }
+            { icon: "shirt", label: "Laundry" }
         ],
         discount: "10% discount for new students"
     },
@@ -25,7 +25,7 @@
      // Standard Room of 1
      {
         title: "Standard Room",
-        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop",
+        image: "assets/img/madiba-rooms/stan1.jpg",
         imageAlt: "Image of Standard Room",
         capacity: 1,
         capacityIcon: "user",
@@ -38,7 +38,7 @@
             { icon: "wifi", label: "WiFi" },
             { icon: "zap", label: "24/7 Power" },
             { icon: "sparkles", label: "Cleaning" },
-            { icon: "coffee", label: "Study Desk" }
+            { icon: "shirt", label: "Laundry" }
         ],
         discount: "10% discount for new students"
     },
@@ -46,7 +46,7 @@
     // Executive Room of 2
     {
         title: "Executive Room",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop",
+        image: "assets/img/madiba-rooms/exec2.jpg",
         imageAlt: "Image of Executive Room",
         capacity: 2,
         capacityIcon: "users", // lucide icon name
@@ -66,7 +66,7 @@
     // Standard Room of 2
     {
         title: "Standard Room",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop",
+        image: "assets/img/madiba-rooms/stan2.jpg",
         imageAlt: "Image of Standard Room",
         capacity: 2,
         capacityIcon: "users", // lucide icon name
@@ -86,7 +86,7 @@
      // Executive Room of 3
      {
         title: "Executive Room",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop",
+        image: "assets/img/madiba-rooms/exec3.jpg",
         imageAlt: "Image of Executive Room",
         capacity: 3,
         capacityIcon: "users", // lucide icon name
@@ -106,7 +106,7 @@
     // Standard Room of 3
     {
         title: "Standard Room",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop",
+        image: "assets/img/madiba-rooms/stan3.jpg",
         imageAlt: "Image of Standard Room",
         capacity: 3,
         capacityIcon: "users", // lucide icon name
@@ -127,7 +127,7 @@
     // Executive Room of 4
     {
         title: "Executive Room",
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop",
+        image: "assets/img/madiba-rooms/exec4.jpg",
         imageAlt: "Image of Executive Room",
         capacity: 4,
         capacityIcon: "users", // lucide icon name
@@ -171,7 +171,7 @@ function generateSlideContent(roomData) {
                     
                     <div class="flex flex-wrap items-center gap-4 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/10">
                         ${roomData.pricing.map(price => `
-                            <p class="text-sm font-semibold">
+                            <p class="text-[sm]  font-semibold">
                                 <span class="text-red-300 drop-shadow-sm">${formatPrice(price.price)}</span> - <span class="text-white">${price.university}</span>
                             </p>
                         `).join('')}
@@ -244,13 +244,13 @@ function initializeEmblaCarousel() {
         nextButton.addEventListener('click', () => embla.scrollNext());
         
         // Auto-scroll functionality
-        setInterval(() => {
-            if (embla.canScrollNext()) {
-                embla.scrollNext();
-            } else {
-                embla.scrollTo(0);
-            }
-        }, 5000);
+        // setInterval(() => {
+        //     if (embla.canScrollNext()) {
+        //         embla.scrollNext();
+        //     } else {
+        //         embla.scrollTo(0);
+        //     }
+        // }, 5000);
     }
 }
 
