@@ -150,7 +150,9 @@
 function generateSlideContent(roomData) {
     // Format price with Nigerian Naira symbol
     const formatPrice = (price) => `₦${price.toLocaleString()}`;
-    
+    // Responsive amenities: show only first 2 for <lg
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
+    const amenitiesToShow = isMobile ? roomData.amenities.slice(0, 2) : roomData.amenities;
     return `
         <div class="embla__slide p-1">
             <div class="card-container relative overflow-hidden rounded-xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:-translate-y-1 bg-white border border-gray-200">
@@ -171,14 +173,14 @@ function generateSlideContent(roomData) {
                     
                     <div class="flex flex-wrap items-center gap-4 bg-black/20 backdrop-blur-sm rounded-lg p-3 border border-white/10">
                         ${roomData.pricing.map(price => `
-                            <p class="text-[sm]  font-semibold">
+                            <p class="text-sm font-semibold">
                                 <span class="text-red-300 drop-shadow-sm">${formatPrice(price.price)}</span> - <span class="text-white">${price.university}</span>
                             </p>
                         `).join('')}
                     </div>
                     
                     <ul class="grid grid-cols-2 gap-3 text-xs">
-                        ${roomData.amenities.map(amenity => `
+                        ${amenitiesToShow.map(amenity => `
                             <li class="flex items-center text-white bg-white/10 backdrop-blur-sm rounded-lg px-2 py-2 border border-white/10">
                                 <i data-lucide="${amenity.icon}" class="w-4 h-4 mr-2 drop-shadow-sm" style="stroke: #fca5a5;"></i>
                                 <span class="font-medium">${amenity.label}</span>
@@ -255,12 +257,24 @@ function initializeEmblaCarousel() {
 }
 
 // ====== DEMO INITIALIZATION ======
-document.addEventListener('DOMContentLoaded', () => {
-    // First populate the slides
+function setupResponsiveSlides() {
     populateSlides('slidesContainer');
-    
-    // Then initialize the carousel after slides are populated
     initializeEmblaCarousel();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupResponsiveSlides();
+    // Re-render slides on window resize for responsiveness
+    let lastWidth = window.innerWidth;
+    window.addEventListener('resize', () => {
+        // Only re-render if breakpoint crossed
+        const isNowMobile = window.innerWidth < 1024;
+        const wasMobile = lastWidth < 1024;
+        if (isNowMobile !== wasMobile) {
+            setupResponsiveSlides();
+        }
+        lastWidth = window.innerWidth;
+    });
 });
 
 // ====== USAGE INSTRUCTIONS ======
