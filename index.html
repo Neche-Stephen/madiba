@@ -81,14 +81,14 @@
         }
       }
       .card-container { height: 500px; }
-      .custom_pricing:hover {
+      .view_more_amenities:hover, .custom_pricing:hover {
         background-image: linear-gradient(to right, #dc2626, #b91c1c) !important;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
       }
-      .custom_pricing {
+      .view_more_amenities, .custom_pricing {
         text-decoration: none;
       }
-      .custom_pricing:hover {
+      .view_more_amenities:hover, .custom_pricing:hover {
         color: white;
       }
     </style>
@@ -777,7 +777,17 @@
       <div
         class="after:bg-[url('assets/img/theme/5.png')] dark-opicity-5 bg-size-full after:bg-no-repeat after:absolute after:right-0 after:bottom-[-60px] after:z-[-1] after:2xl:w-[175px] after:w-[120px] after:2xl:h-[150px] after:h-[120px]"
       ></div>
+
+        <!-- View More Amenities Link -->
+
+    <div class="w-full flex justify-center mt-10">
+      <a href="facilities.html" class="inline-flex items-center px-6 py-2 text-sm font-semibold rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 view_more_amenities">
+        View More Amenities
+        <svg class="ml-2 -mr-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
     </section>
+  
 
     <!-- Prices -->
    
