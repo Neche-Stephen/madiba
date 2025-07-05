@@ -27,6 +27,20 @@
     <!-- Main Style -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <style>
+
+      .view_more_amenities:hover {
+        background-image: linear-gradient(to right, #dc2626, #b91c1c) !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+      }
+      .view_more_amenities {
+        text-decoration: none;
+      }
+      .view_more_amenities:hover {
+        color: white;
+      }
+    </style>
+
 </head>
 
 <body>
@@ -37,126 +51,38 @@
     </div> -->
 
     <!-- Header -->
-    <header>
-      <!-- <div class="relative">
-        <div
-          class="flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-[12px] lg:flex hidden"
-        >
+    <header class="">
+      <div class="relative">
+        <div class="flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-[12px] lg:flex hidden">
           <div class="w-1/2 py-[10px] flex">
             <div class="pr-[15px] border-r border-solid border-[#ddd]">
-              <i class="ri-mail-line mr-[5px] text-[#FF0000] text-[16px]"></i>
+              <i class="ri-mail-line mr-[5px] text-[#ed5b31] text-[16px]"></i>
               example@ec-email.com
-            </div>
-            <div class="flex items-center pl-[15px] lh-location">
-              <div
-                class="flex items-center custom-select text-[14px] text-[#777]"
-              >
-                <i
-                  class="ri-map-pin-line mr-[5px] text-[#FF0000] text-[16px]"
-                ></i>
-                <select class="hidden">
-                  <option value="option1">Surat</option>
-                  <option value="option2">Delhi</option>
-                  <option value="option3">Rajkot</option>
-                  <option value="option4">Udaipur</option>
-                </select>
-              </div>
             </div>
           </div>
           <div class="w-1/2 py-[10px] flex justify-end">
             <div class="pr-[15px] border-r border-solid border-[#ddd]">
-              <i class="ri-phone-line mr-[5px] text-[#FF0000] text-[16px]"></i>
+              <i class="ri-phone-line mr-[5px] text-[#ed5b31] text-[16px]"></i>
               +91(123)(456)(7890)
             </div>
             <div class="mx-[-5px] pl-[15px]">
-              <a href="javascript:void(0)"
-                ><i
-                  class="ri-facebook-box-line facebook mx-[5px] text-[18px] text-[#3b5998]"
-                ></i
-              ></a>
-              <a href="javascript:void(0)"
-                ><i
-                  class="ri-twitter-x-line twitter mx-[5px] text-[18px] text-[#03a9f4]"
-                ></i
-              ></a>
-              <a href="javascript:void(0)"
-                ><i
-                  class="ri-linkedin-box-line linkedin mx-[5px] text-[18px] text-[#3b5998]"
-                ></i
-              ></a>
-              <a href="javascript:void(0)"
-                ><i
-                  class="ri-instagram-line instagram mx-[5px] text-[18px] text-[#FF0000]"
-                ></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <div class="relative bg-gray-900">
-        <div
-          class="flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-[12px] lg:flex hidden"
-        >
-          <div class="w-1/2 py-[10px] flex">
-            <div class="pr-[15px] border-r border-solid border-gray-600 text-gray-300">
-              <i class="ri-mail-line mr-[5px] text-[#FF0000] text-[16px]"></i>
-              example@ec-email.com
-            </div>
-            <!-- <div class="flex items-center pl-[15px] lh-location">
-              <div
-                class="flex items-center custom-select text-[14px] text-gray-300"
-              >
-                <i
-                  class="ri-map-pin-line mr-[5px] text-[#FF0000] text-[16px]"
-                ></i>
-                <select class="hidden">
-                  <option value="option1">Surat</option>
-                  <option value="option2">Delhi</option>
-                  <option value="option3">Rajkot</option>
-                  <option value="option4">Udaipur</option>
-                </select>
-              </div>
-            </div> -->
-          </div>
-          <div class="w-1/2 py-[10px] flex justify-end">
-            <div class="pr-[15px] border-r border-solid border-gray-600 text-gray-300">
-              <i class="ri-phone-line mr-[5px] text-[#FF0000] text-[16px]"></i>
-              +91(123)(456)(7890)
-            </div>
-            <div class="mx-[-5px] pl-[15px]">
-              <a href="javascript:void(0)"
-                ><i
-                  class="ri-facebook-box-line facebook mx-[5px] text-[18px] text-[#3b5998]"
-                ></i
-              ></a>
-              <a href="javascript:void(0)"
-                ><i
-                  class="ri-twitter-x-line twitter mx-[5px] text-[18px] text-[#03a9f4]"
-                ></i
-              ></a>
-              <a href="javascript:void(0)"
-                ><i
-                  class="ri-linkedin-box-line linkedin mx-[5px] text-[18px] text-[#3b5998]"
-                ></i
-              ></a>
-              <a href="javascript:void(0)"
-                ><i
-                  class="ri-instagram-line instagram mx-[5px] text-[18px] text-[#FF0000]"
-                ></i
-              ></a>
+              <a href="javascript:void(0)"><i class="ri-facebook-box-line facebook mx-[5px] text-[18px] text-[#3b5998]"></i></a>
+              <a href="javascript:void(0)"><i class="ri-twitter-x-line twitter mx-[5px] text-[18px] text-[#03a9f4]"></i></a>
+              <a href="javascript:void(0)"><i class="ri-linkedin-box-line linkedin mx-[5px] text-[18px] text-[#3b5998]"></i></a>
+              <a href="javascript:void(0)"><i class="ri-instagram-line instagram mx-[5px] text-[18px] text-[#ed5b31]"></i></a>
             </div>
           </div>
         </div>
       </div>
-      <div class="lh-header bg-[#ffffff] absolute w-full z-[16] py-[6px]">
+      <div class="lh-header bg-[#000000b3] absolute w-full z-[16] py-[6px]">
         <div
           class="flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-[12px]"
         >
-          <nav class="flex flex-nowrap w-full py-[3px]">
+          <nav class="flex flex-nowrap w-full py-[3px]" >
             <a class="navbar-brand py-[5px]" href="index.html">
               <img
-                src="assets/img/logo/madiba3.png"
-                style="height: 58px; width: 88px"
+                src="assets/img/logo/madiba5.png"
+                style="height: 58px; width: 98px"
                 alt="logo"
                 class="xl:w-[180px] w-[160px] relative z-[2]"
               />
@@ -168,7 +94,7 @@
               data-bs-target="#"
               aria-label="Toggle navigation"
             >
-              <i class="ri-menu-2-line text-[#000]"></i>
+              <i class="ri-menu-2-line text-[#fff]"></i>
             </button>
             <div class="flex basis-[auto] grow items-center lg:flex hidden">
               <ul
@@ -176,7 +102,7 @@
               >
                 <li class="ml-[30px] nav-item dropdown relative">
                   <a
-                    class="py-[5px] text-[15px] text-[#000] nav-link"
+                    class="py-[5px] text-[15px] text-white nav-link"
                     href="index.html"
                   >
                     Home
@@ -185,7 +111,7 @@
 
                 <li class="ml-[30px] nav-item dropdown relative">
                   <a
-                    class="py-[5px] text-[15px] text-[#000] nav-link"
+                    class="py-[5px] text-[15px] text-white nav-link"
                     href="about.html"
                   >
                     About Us
@@ -193,7 +119,7 @@
                 </li>
                 <li class="ml-[30px] nav-item dropdown relative">
                   <a
-                    class="py-[5px] text-[15px] text-[#000] nav-link"
+                    class="py-[5px] text-[15px] text-white nav-link"
                     href="contact.html"
                   >
                     Contact
@@ -201,7 +127,7 @@
                 </li>
                 <li class="ml-[30px] nav-item dropdown relative">
                   <a
-                    class="py-[5px] text-[15px] text-[#000] nav-link"
+                    class="py-[5px] text-[15px] text-white nav-link"
                     href="facilities.html"
                   >
                     Luxury Amenities
@@ -209,7 +135,7 @@
                 </li>
                 <li class="ml-[30px] nav-item dropdown relative">
                   <a
-                    class="py-[5px] text-[15px] text-[#000] nav-link"
+                    class="py-[5px] text-[15px] text-white nav-link"
                     href="gallery.html"
                   >
                     Gallery
@@ -613,6 +539,15 @@
         <div
           class="after:bg-[url('assets/img/theme/5.png')] dark-opicity-5 bg-size-full after:bg-no-repeat after:absolute after:right-0 after:bottom-[-60px] after:z-[-1] after:2xl:w-[175px] after:w-[120px] after:2xl:h-[150px] after:h-[120px]"
         ></div>
+
+              <!-- View More Amenities Link -->
+
+        <div class="w-full flex justify-center mt-10">
+          <a href="facilities.html" class="inline-flex items-center px-6 py-2 text-sm font-semibold rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 view_more_amenities">
+            View More Amenities
+            <svg class="ml-2 -mr-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
       </section>
 
     <!-- Team -->
@@ -658,9 +593,9 @@
                     </div>
                     <div class="lg:w-1/2 w-full px-[12px] mb-[24px] lg:order-[2] order-[1]">
                         <div class="lh-social-media h-full lg:border-x-[1px] lg:border-b-[0] md:border-b-[1px] border-b-[0] lg:pb-[0] md:pb-[30px] pb-[0] border-solid border-[#808384]">
-                            <div class="footer-logos flex md:justify-center justify-start bg-[white]">
+                            <div class="footer-logos flex md:justify-center justify-start">
                                 <!-- <img src="assets/img/logo/logo.png" alt="logo" class="w-[180px]"> -->
-                                <img src="assets/img/logo/madiba3.png" alt="logo" class="w-[180px]">
+                                <img src="assets/img/logo/madiba5.png" alt="logo" class="w-[180px]">
 
                             </div>
                             <div class="lh-footer-social lg:p-[24px] py-[24px] lg:border-b border-solid border-[#808384]">

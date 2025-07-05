@@ -487,8 +487,8 @@ ul.navbar-nav .dropdown:hover .dropdown-menu {
   padding: 0 !important;
   position: fixed !important;
   top: 0 !important;
-  /* background-color: rgba(0, 0, 0, 0.9) !important; */
-  background-color: white !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  /* background-color: white !important; */
   -webkit-animation: slideDown 0.35s ease-in-out;
           animation: slideDown 0.35s ease-in-out;
   z-index: 100;
