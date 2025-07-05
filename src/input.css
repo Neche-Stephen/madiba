@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer components {
+  .view_more_amenities:hover, .custom_pricing:hover {
+    background-image: linear-gradient(to right, #dc2626, #b91c1c) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  }
+  .view_more_amenities, .custom_pricing {
+    text-decoration: none;
+  }
+  .view_more_amenities:hover, .custom_pricing:hover {
+    color: white;
+  }
+  
+  /* Embla carousel styles */
+  .embla__viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 90%;
+    padding-left: 1rem;
+    min-height: 500px;
+  }
+  
+  @media (min-width: 768px) {
+    .embla__slide {
+      flex: 0 0 60%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .embla__slide {
+      flex: 0 0 40%;
+    }
+  }
+  
+  .card-container { 
+    height: 500px; 
+  }
+} 

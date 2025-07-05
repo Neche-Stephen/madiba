@@ -2,3 +2,26 @@ Do we need a services page, it is present.
 Add room details, so that on clicking a room, user gets navigated there. 
 Above might mean students need to click on room card, meaning a button is needed there. 
 Add FAQ to a section of the site. There is a page for it alreadu
+
+
+
+What Does It Mean to "Update Your CSS"?
+Whenever you:
+Change your HTML and use new Tailwind classes
+Update your src/input.css with new custom styles
+Change your Tailwind config (e.g., add colors, fonts, etc.)
+You need to rebuild your CSS so that Tailwind can:
+Scan your files for all the classes you use
+Remove unused styles (purge)
+Output a new, optimized assets/css/tailwind.css
+How to do it:
+Just run:
+
+npx tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --minify
+
+Or, if you want it to watch for changes as you develop:
+npx tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --watch
+
+In short:
+Whenever you make changes to your HTML or Tailwind config, "update your CSS" means to re-run the Tailwind build command so your site always uses the latest, optimized styles.
+Let me know if you want a quick reference or have any other questions!
