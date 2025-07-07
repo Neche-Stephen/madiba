@@ -8,7 +8,7 @@
         imageAlt: "Image of Executive Room",
         capacity: 1,
         capacityIcon: "user",
-        description: "A comfortable standard room ideal for focused study. Perfect for students who prefer a cozy, private space with all essential amenities for academic success.",
+        description: "An exclusive single-occupancy room offering privacy and refined comfort. <span class='hidden lg:inline'>Ideal for focused study and relaxation, with amenities tailored for student success.</span>",
         pricing: [
             { university: "Nile University Students", price: "3,616,000" },
             { university: "Baze University Students", price: "3,816,000"}
@@ -29,7 +29,7 @@
         imageAlt: "Image of Standard Room",
         capacity: 1,
         capacityIcon: "user",
-        description: "A comfortable standard room ideal for focused study. Perfect for students who prefer a cozy, private space with all essential amenities for academic success.",
+        description: "A well-appointed room designed for individual guests seeking tranquility. <span class='hidden lg:inline'>Perfect for students who value a peaceful environment for rest and study.</span>",
         pricing: [
             { university: "Nile University Students", price: "3,516,000" },
             { university: "Baze University Students", price: "3,716,000" }
@@ -50,7 +50,7 @@
         imageAlt: "Image of Executive Room",
         capacity: 2,
         capacityIcon: "users", // lucide icon name
-        description: "A luxurious executive room perfect for senior students and professionals. Features premium amenities and spacious living area for an enhanced university experience.",
+        description: "A spacious executive room tailored for two, ensuring superior comfort. <span class='hidden lg:inline'>Designed for study partners, offering comfort and convenience for academic life.</span>",
         pricing: [
             { university: "Nile University Students", price: "3,266,000" },
             { university: "Baze University Students", price: "3,666,000" }
@@ -70,7 +70,7 @@
         imageAlt: "Image of Standard Room",
         capacity: 2,
         capacityIcon: "users", // lucide icon name
-        description: "A luxurious executive room perfect for senior students and professionals. Features premium amenities and spacious living area for an enhanced university experience.",
+        description: "A comfortable and elegant setting, ideal for two guests. <span class='hidden lg:inline'>Thoughtfully designed for students, with all essentials for a productive stay.</span>",
         pricing: [
             { university: "Nile University Students", price: "3,116,000" },
             { university: "Baze University Students", price: "3,216,000" }
@@ -90,7 +90,7 @@
         imageAlt: "Image of Executive Room",
         capacity: 3,
         capacityIcon: "users", // lucide icon name
-        description: "A luxurious executive room perfect for senior students and professionals. Features premium amenities and spacious living area for an enhanced university experience.",
+        description: "A premium accommodation for three, combining space and sophistication. <span class='hidden lg:inline'>Well-equipped for small student groups, ensuring comfort and collaboration.</span>",
         pricing: [
             { university: "Nile University Students", price: "2,916,000" },
             { university: "Baze University Students", price: "3,116,000" }
@@ -110,7 +110,7 @@
         imageAlt: "Image of Standard Room",
         capacity: 3,
         capacityIcon: "users", // lucide icon name
-        description: "A luxurious executive room perfect for senior students and professionals. Features premium amenities and spacious living area for an enhanced university experience.",
+        description: "A thoughtfully designed room for three, balancing comfort and utility. <span class='hidden lg:inline'>Great for friends or classmates, with practical amenities for shared student living.</span>",
         pricing: [
             { university: "Nile University Students", price: "2,766,000" },
             { university: "Baze University Students", price: "2,966,000" }
@@ -131,7 +131,7 @@
         imageAlt: "Image of Executive Room",
         capacity: 4,
         capacityIcon: "users", // lucide icon name
-        description: "A luxurious executive room perfect for senior students and professionals. Features premium amenities and spacious living area for an enhanced university experience.",
+        description: "A distinguished suite providing ample space and luxury for groups of four. <span class='hidden lg:inline'>Perfect for student groups, with premium facilities for a successful academic experience.</span>",
         pricing: [
             { university: "Nile University Students", price: "2,816,000" },
             { university: "Baze University Students", price: "3,116,000" }
