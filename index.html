@@ -14,7 +14,7 @@
     <meta name="description" content="Best Luxurious Hotel Booking Template." />
     <meta
       name="keywords"
-      content="luxury student accommodation, student housing, premium student living, student apartments, university accommodation, student residence, modern student rooms, student lifestyle, student community, student amenities, all-inclusive student housing, student flats, student suites, student accommodation company, upscale student housing, student living experience, student rental, student housing provider, student accommodation services, student housing solutions"
+      content="hotel, booking, business, restaurant, spa, resort, landing, agency, corporate, start up, site design, new business site, business template, professional template, classic, modern"
     />
     <title>Madiba Hostel - Luxury Student Accomodation in Abuja</title>
 
@@ -178,7 +178,7 @@
                 <li class="ml-[30px] nav-item dropdown relative">
                   <a
                     class="py-[5px] text-[15px] text-white nav-link"
-                    href="facilities.html"
+                    href="amenities.html"
                   >
                     Luxury Amenities
                   </a>
@@ -244,7 +244,7 @@
             </li>
             <li class="dropdown drop-list leading-[28px] relative">
               <a
-                href="facilities.html"
+                href="amenities.html"
                 class="block capitalize text-[15px] font-normal text-[#444] hover:text-[#444] no-underline border-b border-solid border-[#e3e1e1] p-[10px]"
                 >Luxury Amenities</a
               >
@@ -312,18 +312,140 @@
 
     <!-- Search control -->
 
-    <!-- Accommodation Slider -->
-    <section aria-labelledby="accommodation-options">
-        <h2 id="accommodation-options" class="sr-only">Available Accommodations</h2>
-        <div class="embla relative">
-          <button id="prevButton" data-lucide="arrow-left" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[hsl(var(--primary))] text-white p-2 rounded-full shadow-md cursor-pointer"></button>
-          <div class="embla__viewport">
-            <div id="slidesContainer" class="embla__container">
+    <!-- Accommodation Slider (Original Approach) -->
+    <!-- <section aria-labelledby="accommodation-options">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2 px-4">Featured Accommodations</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto px-4">Experience our most popular room types designed for student success and comfort</p>
+      </div>
+      <h2 id="accommodation-options" class="sr-only">Available Accommodations</h2>
+      <div class="embla relative">
+        <button id="prevButton" data-lucide="arrow-left" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[hsl(var(--primary))] text-white p-2 rounded-full shadow-md cursor-pointer"></button>
+        <div class="embla__viewport">
+          <div id="slidesContainer" class="embla__container">
+     
+          </div>
+        </div>
+        <button id="nextButton" data-lucide="arrow-right" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[hsl(var(--primary))] text-white p-2 rounded-full shadow-md cursor-pointer"></button>
+      </div>
+    </section> -->
+
+    <!-- <div class="text-center mt-6">
+      <a href="room.html" class="custom_pricing inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md">
+        See all rooms
+        <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"/>
+        </svg>
+      </a>
+    </div> -->
+
+    <!-- Accomodation section -->
+    <section class="section-amenities relative">
+
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2 px-4">Featured Accommodations</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto px-4">Experience our most popular room types designed for student success and comfort</p>
+      </div>
+      <h2 id="accommodation-options" class="sr-only">Available Accommodations</h2>
+
+      <div class="flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] relative ">
        
+        <div class="flex flex-wrap mb-[-24px] w-full">
+
+          <div class="lg:w-1/2 w-full px-3 mb-6 ">
+            <div class="shadow-lg flex rounded-xl bg-white overflow-hidden h-full transition-all hover:shadow-xl">
+              <div class="flex flex-col md:flex-row h-full w-full">
+                <!-- Image Section -->
+                <div class="md:w-1/2 w-full">
+                  <img 
+                    src="assets/img/madiba-rooms/exec1.jpg" 
+                    alt="Executive Room" 
+                    class="w-full h-[220px] sm:h-[250px] lg:h-[300px] object-cover"
+                  />
+                </div>
+                
+                <!-- Content Section -->
+                <div class="md:w-1/2 w-full p-6 flex flex-col justify-between">
+                  <div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">Executive Room (1 Person)</h4>
+                    
+                    <div class="space-y-3">
+                      <!-- Price Card 1 -->
+                      <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Nile University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                          <span class="text-xl font-bold text-red-600">₦3,616,000</span>
+                        </div>
+                      </div>
+                      
+                      <!-- Price Card 2 -->
+                      <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Baze University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                          <span class="text-xl font-bold text-red-600">₦3,816,000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
             </div>
           </div>
-          <button id="nextButton" data-lucide="arrow-right" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[hsl(var(--primary))] text-white p-2 rounded-full shadow-md cursor-pointer"></button>
+
+          <div class="lg:w-1/2 w-full px-3 mb-6">
+            <div class="shadow-lg flex rounded-xl bg-white overflow-hidden h-full transition-all hover:shadow-xl">
+              <div class="flex flex-col md:flex-row h-full w-full">
+                <!-- Image Section -->
+                <div class="md:w-1/2 w-full">
+                  <img 
+                    src="assets/img/madiba-rooms/stan1.jpg" 
+                    alt="Executive Room" 
+                    class="w-full h-[220px] sm:h-[250px] lg:h-[300px] object-cover"
+                  />
+                </div>
+                
+                <!-- Content Section -->
+                <div class="md:w-1/2 w-full p-6 flex flex-col justify-between">
+                  <div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">Standard Room (1 Person)</h4>
+                    
+                    <div class="space-y-3">
+                      <!-- Price Card 1 -->
+                      <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Nile University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                          <span class="text-xl font-bold text-red-600">₦3,516,000</span>
+                        </div>
+                      </div>
+                      
+                      <!-- Price Card 2 -->
+                      <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Baze University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                          <span class="text-xl font-bold text-red-600">₦3,716,000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        
+         
         </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="room.html" class="custom_pricing inline-flex items-center px-5 py-2.5 text-[15px] font-medium rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md">
+          See all rooms
+          <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"/>
+          </svg>
+        </a>
+      </div>
     </section>
 
     <!-- Other Students -->
@@ -337,7 +459,7 @@
       <p class="text-gray-600 mb-4">
           We welcome all students. Contact us for personalized rates and availability.
       </p>
-      <a href="contact.html" class="custom_pricing inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md">
+      <a href="contact.html" class="custom_pricing inline-flex items-center px-5 py-2.5 text-[15px] font-medium rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md">
         Contact for Pricing
         <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"/>
@@ -410,7 +532,7 @@
                   <i
                     class="ri-arrow-right-up-line text-[18px] py-[10px] rotate-[42]"
                   ></i>
-                  Luxury amenities
+                  Amenities
                 </h4>
                 <p>
                   Our homes feature high-speed wifi, lounges, gyms, and well-furnished rooms designed with student's comfort in mind.
@@ -693,7 +815,7 @@
         <!-- View More Amenities Link -->
 
     <div class="w-full flex justify-center mt-10">
-      <a href="facilities.html" class="inline-flex items-center px-6 py-2 text-sm font-semibold rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 view_more_amenities">
+      <a href="amenities.html" class="inline-flex items-center px-6 py-2 text-[15px] font-semibold rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 view_more_amenities">
         View More Amenities
         <svg class="ml-2 -mr-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
@@ -821,7 +943,7 @@
                   <div class="lg:w-1/2 lg:pl-[12px] pr-[0] pl-[0] mb-[24px] w-full">
                       <div class="lh-faq-image h-full">
                         <!-- <img src="assets/img/faq/faq-side.png" alt="faq-side-image" class="w-full rounded-[15px]"> -->
-                          <img src="assets/img/about/11.jpg" alt="faq-side-image" class="w-full h-full max-h-[500px] object-cover rounded-[15px]">
+                          <img src="assets/img/about/4.jpg" alt="faq-side-image" class="w-full h-full max-h-[500px] object-cover rounded-[15px]">
                       </div>
                   </div>
               </div>
@@ -845,7 +967,7 @@
         <img src="assets/img/gallery-2/10.jpg" alt="gallery-4" class="w-full h-64 object-cover rounded-[15px] shadow-md" />
       </div>
       <div class="w-full flex justify-center mt-4">
-        <a href="gallery.html" class="inline-flex items-center px-6 py-2 text-sm font-semibold rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 view_more_amenities">
+        <a href="gallery.html" class="inline-flex items-center px-6 py-2 text-[15px] font-semibold rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 view_more_amenities">
           See More
           <svg class="ml-2 -mr-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
@@ -876,7 +998,7 @@
                                 </li>
                                 <li class="py-[5px]">
                                     <code class="text-[16px] text-[#FF0000]">*</code>
-                                    <a href="facilities.html" class="text-[14px] text-[#bfbfc0] hover:text-[#bfbfc0]">Amenities</a>
+                                    <a href="amenities.html" class="text-[14px] text-[#bfbfc0] hover:text-[#bfbfc0]">Luxury Amenities</a>
                                 </li>
                                 
                                 <li class="py-[5px]">
@@ -901,8 +1023,8 @@
                                 <p class="md:m-auto md:text-center text-left text-[14px] max-w-[400px] text-[#bfbfc0] leading-[22px]">
                                     A sanctuary for scholars: blending productivity, comfort, and style in every detail</p>
                             </div>
-                            <div class="lh-follow-social md:block flex-col justify-self-center items-center xl:pt-[24px] xl:pb-0 lg:pt-[22px] lg:pb-0 pt-[0] lg:pb-[30px] pb-0">
-                                <h4 class="heading text-[18px] font-medium md:text-center text-left">Follow On Social</h4>
+                            <div class="lh-follow-social md:block flex-col justify-self-center items-center xl:pt-[24px] xl:pb-0 lg:pt-[22px] lg:pb-0 pt-[0] pb-0">
+                                <h4 class="heading text-[18px] ml-3 md:ml-0 font-medium md:text-center text-left">Connect with us</h4>
                                 <div class="footer-logo-image flex md:justify-center pt-[15px] md:text-center text-left">
                                     <a href="#">
                                         <img src="assets/img/logo/facebook.png" alt="facebook" class="w-[30px] mx-[4px] duration-[0.3s] ease-in-out hover:scale-[1.3]">

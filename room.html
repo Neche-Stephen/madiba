@@ -8,7 +8,7 @@
     <meta name="description" content="Best Luxurious Hotel Booking Template.">
     <meta name="keywords"
         content="hotel, booking, business, restaurant, spa, resort, landing, agency, corporate, start up, site design, new business site, business template, professional template, classic, modern">
-    <title>Luxurious - Hotel Booking Tailwind CSS Template.</title>
+    <title>Madiba Hostel - Luxury Student Accomodation in Abuja</title>
 
     <link rel="icon" href="assets/img/favicons/favicon.png" type="image/x-icon">
 
@@ -26,146 +26,118 @@
 
     <!-- Main Style -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+
+    <style>
+
+      .view_more_amenities:hover {
+        background-image: linear-gradient(to right, #dc2626, #b91c1c) !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+      }
+      .view_more_amenities {
+        text-decoration: none;
+      }
+      .view_more_amenities:hover {
+        color: white;
+      }
+    </style>
 
 </head>
 
 <body>
 
-    <!-- loader -->
-    <div class="lh-loader min-w-full w-full h-screen fixed top-0 left-0 flex items-center justify-center bg-[#fff] z-[25]">
-        <span class="loader w-[100px] h-[100px] flex relative items-center justify-center"></span>
-    </div>
-
     <!-- Header -->
-    <header>
+    <header class="">
         <div class="relative">
             <div class="flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-[12px] lg:flex hidden">
                 <div class="w-1/2 py-[10px] flex">
                     <div class="pr-[15px] border-r border-solid border-[#ddd]">
-                        <i class="ri-mail-line mr-[5px] text-[#FF0000] text-[16px]"></i>
+              <i class="ri-mail-line mr-[5px] text-[#ed5b31] text-[16px]"></i>
                         example@ec-email.com
-                    </div>
-                    <div class="flex items-center pl-[15px] lh-location">
-                        <div class="flex items-center custom-select text-[14px] text-[#777]">
-                            <i class="ri-map-pin-line mr-[5px] text-[#FF0000] text-[16px]"></i>
-                            <select class="hidden">
-                                <option value="option1">Surat</option>
-                                <option value="option2">Delhi</option>
-                                <option value="option3">Rajkot</option>
-                                <option value="option4">Udaipur</option>
-                            </select>
-                        </div>
                     </div>
                 </div>
                 <div class="w-1/2 py-[10px] flex justify-end">
                     <div class="pr-[15px] border-r border-solid border-[#ddd]">
-                        <i class="ri-phone-line mr-[5px] text-[#FF0000] text-[16px]"></i>
+              <i class="ri-phone-line mr-[5px] text-[#ed5b31] text-[16px]"></i>
                         +91(123)(456)(7890)
                     </div>
                     <div class="mx-[-5px] pl-[15px]">
                         <a href="javascript:void(0)"><i class="ri-facebook-box-line facebook mx-[5px] text-[18px] text-[#3b5998]"></i></a>
                         <a href="javascript:void(0)"><i class="ri-twitter-x-line twitter mx-[5px] text-[18px] text-[#03a9f4]"></i></a>
                         <a href="javascript:void(0)"><i class="ri-linkedin-box-line linkedin mx-[5px] text-[18px] text-[#3b5998]"></i></a>
-                        <a href="javascript:void(0)"><i class="ri-instagram-line instagram mx-[5px] text-[18px] text-[#FF0000]"></i></a>
+              <a href="javascript:void(0)"><i class="ri-instagram-line instagram mx-[5px] text-[18px] text-[#ed5b31]"></i></a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="lh-header bg-[#000000b3] absolute w-full z-[16] py-[6px]">
-            <div class="flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-[12px]">
-                <nav class="flex flex-nowrap w-full py-[3px]">
+        <div
+          class="flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-[12px]"
+        >
+          <nav class="flex flex-nowrap w-full py-[3px]" >
                     <a class="navbar-brand py-[5px]" href="index.html">
-                        <img src="assets/img/logo/logo.png" alt="logo" class="xl:w-[180px] w-[160px] relative z-[2]">
-                    </a>
-                    <button class="navbar-toggler shadow-none flex basis-[auto] grow items-center text-[24px] text-[#fff] lg:hidden flex justify-end" type="button" data-bs-toggle="collapse" data-bs-target="#" aria-label="Toggle navigation">
-                        <i class="ri-menu-2-line"></i>
+              <img
+                src="assets/img/logo/madiba5.png"
+                style="height: 58px; width: 98px"
+                alt="logo"
+                class="xl:w-[180px] w-[160px] relative z-[2]"
+              />
+            </a>
+            <button
+              class="navbar-toggler shadow-none flex basis-[auto] grow items-center text-[24px] text-[#fff] lg:hidden flex justify-end"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#"
+              aria-label="Toggle navigation"
+            >
+              <i class="ri-menu-2-line text-[#fff]"></i>
                     </button>
                     <div class="flex basis-[auto] grow items-center lg:flex hidden">
-                        <ul class="navbar-nav flex w-full relative z-[3] flex-row justify-end">
+              <ul
+                class="navbar-nav flex w-full relative z-[3] flex-row justify-end"
+              >
                             <li class="ml-[30px] nav-item dropdown relative">
-                                <a class="py-[5px] text-[15px] text-[#fff] nav-link" href="index.html">
+                  <a
+                    class="py-[5px] text-[15px] text-white nav-link"
+                    href="index.html"
+                  >
                                     Home
                                 </a>
                             </li>
-                            <li class="ml-[30px] nav-item dropdown">
-                                <a class="py-[5px] text-[15px] text-[#fff] relative nav-link dropdown-toggle"
-                                    href="javascript:void(0)">
-                                    Category <i class="ri-arrow-down-s-line ml-[5px]"></i>
-                                </a>
-                                <ul class="dropdown-menu min-w-[150px] text-left opacity-0 invisible bg-[#fff] shadow-[0_0_3px_1px_rgba(0,0,0,0.2)] block z-[9] rounded-t-[0] rounded-b-[10px] mt-[30px] transition-all duration-[0.3s] ease-in-out">
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="gallery.html">gallery 1</a>
+
+                <li class="ml-[30px] nav-item dropdown relative">
+                  <a
+                    class="py-[5px] text-[15px] text-white nav-link"
+                    href="about.html"
+                  >
+                    About Us
+                  </a>
                                     </li>
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="gallery-2.html">gallery 2</a>
+                <li class="ml-[30px] nav-item dropdown relative">
+                  <a
+                    class="py-[5px] text-[15px] text-white nav-link"
+                    href="contact.html"
+                  >
+                    Contact
+                  </a>
                                     </li>
-                                </ul>
-                            </li>
-                            <li class="ml-[30px] nav-item dropdown">
-                                <a class="py-[5px] text-[15px] text-[#fff] relative nav-link dropdown-toggle" href="javascript:void(0)">
-                                    Room <i class="ri-arrow-down-s-line ml-[5px]"></i>
-                                </a>
-                                <ul class="dropdown-menu min-w-[150px] text-left opacity-0 invisible bg-[#fff] shadow-[0_0_3px_1px_rgba(0,0,0,0.2)] block z-[9] rounded-t-[0] rounded-b-[10px] mt-[30px] transition-all duration-[0.3s] ease-in-out">
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="room.html">Room</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="room-details.html">Room-details</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="ml-[30px] nav-item dropdown">
-                                <a class="py-[5px] text-[15px] text-[#fff] nav-link relative dropdown-toggle" href="javascript:void(0)">
-                                    Pages <i class="ri-arrow-down-s-line ml-[5px]"></i>
-                                </a>
-                                <ul class="dropdown-menu min-w-[150px] text-left opacity-0 invisible bg-[#fff] shadow-[0_0_3px_1px_rgba(0,0,0,0.2)] block z-[9] rounded-t-[0] rounded-b-[10px] mt-[30px] transition-all duration-[0.3s] ease-in-out">
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="about.html">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="contact.html">Contact</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="facilities.html">Facilities</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="faq.html">Faq</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="prices.html">Prices</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="services.html">Services</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="spa.html">Spa</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="team.html">Team</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="checkout.html">Checkout</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="ml-[30px] nav-item dropdown">
-                                <a class="py-[5px] text-[15px] text-[#fff] nav-link relative dropdown-toggle" href="javascript:void(0)">
-                                    Blog <i class="ri-arrow-down-s-line ml-[5px]"></i>
-                                </a>
-                                <ul class="dropdown-menu min-w-[150px] text-left opacity-0 invisible bg-[#fff] shadow-[0_0_3px_1px_rgba(0,0,0,0.2)] block z-[9] rounded-t-[0] rounded-b-[10px] mt-[30px] transition-all duration-[0.3s] ease-in-out">
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="blog.html">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item text-[14px] text-[#777] capitalize hover:text-[#FF0000]" href="blog-details.html">Blog-details</a>
-                                    </li>
-                                </ul>
+                <li class="ml-[30px] nav-item dropdown relative">
+                  <a
+                    class="py-[5px] text-[15px] text-white nav-link"
+                    href="facilities.html"
+                  >
+                    Luxury Amenities
+                  </a>
                             </li>
                             <li class="ml-[30px] nav-item dropdown relative">
-                                <a class="py-[5px] text-[15px] text-[#fff] nav-link" href="restaurant.html">
-                                    Restaurant
+                  <a
+                    class="py-[5px] text-[15px] text-white nav-link"
+                    href="gallery.html"
+                  >
+                    Gallery
                                 </a>
                             </li>
+               
                         </ul>
                     </div>
                 </nav>
@@ -174,86 +146,61 @@
     </header>
 
     <!-- Mobile-menu -->
-    <div class="lh-sidebar-overlay hidden w-full h-screen fixed top-0 left-0 bg-[#000000b3] z-[17]"></div>
-    <div id="lh_mobile_menu" class="lh-side-cart lh-mobile-menu transition-all duration-[0.5s] ease w-[300px] h-full fixed left-[-300px] bg-[#fff] overflow-y-auto z-[20] p-[15px]">
-        <div class="w-full flex flex-wrap justify-between border-b-2 border-solid border-[#e3e1e1] pb-[10px] mb-[10px]">
-            <span class="text-[18px] text-[#FF0000] font-semibold">My Menu</span>
-            <button type="button" class="lh-close relative border-0 text-[30px] leading-[1px] text-[#999] bg-[#fff]">×</button>
+    <div
+    class="lh-sidebar-overlay hidden w-full h-screen fixed top-0 left-0 bg-[#000000b3] z-[17]"
+  ></div>
+  <div
+    id="lh_mobile_menu"
+    class="lh-side-cart lh-mobile-menu transition-all duration-[0.5s] ease w-[300px] h-full fixed left-[-300px] bg-[#fff] overflow-y-auto z-[20] p-[15px]"
+  >
+    <div
+      class="w-full flex flex-wrap justify-between border-b-2 border-solid border-[#e3e1e1] pb-[10px] mb-[10px]"
+    >
+      <span class="text-[18px] text-[#FF0000] font-semibold">Menu</span>
+      <button
+        type="button"
+        class="lh-close relative border-0 text-[30px] leading-[1px] text-[#999] bg-[#fff]"
+      >
+        ×
+      </button>
         </div>
         <div class="lh-menu-inner flex flex-col justify-between">
-            <input type="text" placeholder="Search" class="lh-menu-box h-[45px] w-full px-[10px] m-0 border-0 outline-none rounded-[5px] bg-[#eee]">
             <div class="lh-menu-content">
                 <ul>
                     <li class="dropdown drop-list leading-[28px] relative">
-                        <a href="index.html" class="block capitalize text-[15px] font-normal text-[#444] hover:text-[#444] no-underline border-b border-solid border-[#e3e1e1] p-[10px]">Home</a>
+            <a
+              href="index.html"
+              class="block capitalize text-[15px] font-normal text-[#444] hover:text-[#444] no-underline border-b border-solid border-[#e3e1e1] p-[10px]"
+              >Home</a
+            >
                     </li>
                     <li class="dropdown drop-list leading-[28px] relative">
-                        <a href="#" class="block capitalize text-[15px] font-normal text-[#444] hover:text-[#444] no-underline border-b border-solid border-[#e3e1e1] p-[10px]">Categories</a>
-                        <ul class="sub-menu shadow-none transition-none hidden w-full static visible opacity-100 p-0 mb-0">
-                            <li class="relative leading-[28px]">
-                                <a href="gallery.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">gallery 1</a>
-                            </li>
-                            <li class="relative leading-[28px]">
-                                <a href="gallery-2.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">gallery 2</a>
-                            </li>
-                        </ul>
+            <a
+              href="about.html"
+              class="block capitalize text-[15px] font-normal text-[#444] hover:text-[#444] no-underline border-b border-solid border-[#e3e1e1] p-[10px]"
+              >About Us</a
+            >
                     </li>
                     <li class="dropdown drop-list leading-[28px] relative">
-                        <a href="#" class="block capitalize text-[15px] font-normal text-[#444] hover:text-[#444] no-underline border-b border-solid border-[#e3e1e1] p-[10px]">Room</a>
-                        <ul class="sub-menu shadow-none transition-none hidden w-full static visible opacity-100 p-0 mb-0">
-                            <li class="relative leading-[28px]">
-                                <a href="room.html" class="block capitalize opacity-80 pl-[20px] hover:text-[#444] border-b border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Room</a>
-                            </li>
-                            <li class="relative leading-[28px]">
-                                <a href="room-details.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Room-details</a>
-                            </li>
-                        </ul>
+            <a
+              href="contact.html"
+              class="block capitalize text-[15px] font-normal text-[#444] hover:text-[#444] no-underline border-b border-solid border-[#e3e1e1] p-[10px]"
+              >Contact</a
+            >
                     </li>
                     <li class="dropdown drop-list leading-[28px] relative">
-                        <a href="#" class="block capitalize text-[15px] font-normal text-[#444] hover:text-[#444] no-underline border-b border-solid border-[#e3e1e1] p-[10px]">Pages</a>
-                        <ul class="sub-menu shadow-none transition-none hidden w-full static visible opacity-100 p-0 mb-0">
-                            <li class="relative leading-[28px]">
-                                <a href="about.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">About Us</a>
-                            </li>
-                            <li class="relative leading-[28px]">
-                                <a href="contact.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Contact</a>
-                            </li>
-                            <li class="relative leading-[28px]">
-                                <a href="facilities.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Facilities</a>
-                            </li>
-                            <li class="relative leading-[28px]">
-                                <a href="faq.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Faq</a>
-                            </li>
-                            <li class="relative leading-[28px]">
-                                <a href="prices.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Prices</a>
-                            </li>
-                            <li class="relative leading-[28px]">
-                                <a href="services.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Services</a>
-                            </li>
-                            <li class="relative leading-[28px]">
-                                <a href="spa.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Spa</a>
-                            </li>
-                            <li class="relative leading-[28px]">
-                                <a href="team.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Team</a>
-                            </li>
-                            <li class="relative leading-[28px]">
-                                <a href="checkout.html" class="block capitalize opacity-80 pl-[20px] border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Checkout</a>
-                            </li>
-                        </ul>
+            <a
+              href="facilities.html"
+              class="block capitalize text-[15px] font-normal text-[#444] hover:text-[#444] no-underline border-b border-solid border-[#e3e1e1] p-[10px]"
+              >Luxury Amenities</a
+            >
                     </li>
                     <li class="dropdown drop-list leading-[28px] relative">
-                        <a href="#" class="block capitalize text-[15px] font-normal text-[#444] no-underline hover:text-[#444] border-b border-solid border-[#e3e1e1] p-[10px]">Blog</a>
-                        <ul class="sub-menu shadow-none transition-none hidden w-full static visible opacity-100 p-0 mb-0">
-                            <li class="relative leading-[28px]">
-                                <a href="blog.html" class="block capitalize opacity-80 pl-[20px] border-b border-solid hover:text-[#444] border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Blog</a>
-                            </li>
-                            <li class="relative leading-[28px]">
-                                <a href="blog-details.html" class="block capitalize opacity-80 pl-[20px] border-b border-solid hover:text-[#444] border-[#e3e1e1] p-[10px] text-[14px] text-[#444] no-underline font-light">Blog-details</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown drop-list leading-[28px] relative">
-                        <a href="restaurant.html" class="block capitalize text-[15px] font-normal text-[#444] no-underline border-b hover:text-[#444] border-solid border-[#e3e1e1] p-[10px]">Restaurant</a>
+            <a
+              href="gallery.html"
+              class="block capitalize text-[15px] font-normal text-[#444] hover:text-[#444] no-underline border-b border-solid border-[#e3e1e1] p-[10px]"
+              >Gallery</a
+            >
                     </li>
                 </ul>
             </div>
@@ -262,288 +209,361 @@
 
     <!-- Banner -->
     <section class="section-banner">
-        <div class="banner-image flex flex-wrap w-full justify-center sm:h-[400px] h-[300px] m-0 bg-[url('assets/img/about/about-banner.png')] bg-cover bg-bottom">
+        <div class="banner-image flex flex-wrap w-full justify-center sm:h-[400px] h-[300px] m-0 bg-[url('assets/img/hero/hero-section6.jpg')] bg-cover">
             <div class="w-full sm:h-[400px] h-[300px] absolute bg-[#000000bf]"></div>
-            <div class="flex items-center justify-center text-center z-2">
-                <div class="mt-[65px] z-10">
-                    <h2
-                        class="mb-[12px] 2xl:text-[40px] xl:text-[38px] lg:text-[36px] md:text-[34px] sm:text-[30px] text-[28px] font-bold">
-                        Room</h2>
+            <div class="banner-section flex items-center justify-center text-center z-2">
+                <div class="lh-banner-contain mt-[65px] z-10">
+                    <h2 class="mb-[12px] 2xl:text-[40px] xl:text-[38px] lg:text-[36px] md:text-[34px] sm:text-[30px] text-[28px] font-bold">Rooms</h2>
+                    <div class="lh-breadcrumb">
                     <h5 class="text-[16px]">
                         <span>
                             <a href="index.html" class="text-[#fff] hover:text-[#fff]">Home</a>
                         </span>
                         <span class="font-bold"> / </span>
                         <span>
-                            <a href="javascript:void(0)" class="text-[#fff] hover:text-[#fff]">Room</a>
+                                <a href="javascript:void(0)" class="text-[#fff] hover:text-[#fff]">Rooms</a>
                         </span>
                     </h5>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-     <!-- Room -->
-     <section class="section-room relative xl:py-[100px] py-[70px]" data-aos="fade-up" data-aos-duration="2000" id="rooms">
-        <div class="2xl:before:w-[150px] xl:before:w-[130px] before:w-[80px] 2xl:before:h-[150px] dark-opicity-5 xl:before:h-[130px] before:h-[80px] bg-size-full before:absolute 2xl:before:top-[100px] before:top-0 2xl:before:right-[180px] xl:before:right-[50px] before:right-0 before:z-[-1] before:bg-[url('assets/img/theme/1.png')]"></div>
-        <div class="flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-[12px]">
-            <div class="text-center w-full mb-[30px]">
-                <h2 class="text-[#000] font-medium leading-[1.2] 2xl:text-[40px] xl:text-[35px] xl:pb-0 lg:text-[30px] md:text-[28px] sm:text-[26px] text-[22px]">Choose Your Luxurious <span class="text-[#FF0000]">Room</span></h2>
+
+    <!-- Accomodation section -->
+    <section class="section-amenities relative mt-12">
+
+        <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2 px-4">Student Accommodation Options</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto px-4">Browse all available room types with detailed pricing for different universities</p>
+        </div>
+        <h2 id="accommodation-options" class="sr-only">Available Accommodations</h2>
+
+        <div class="flex flex-wrap justify-between items-center mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] relative ">
+        
+        <div class="flex flex-wrap mb-[-24px] w-full">
+
+            <div class="lg:w-1/2 w-full px-3 mb-16 lg:mb-6 ">
+            <div class="shadow-lg flex rounded-xl bg-white overflow-hidden h-full transition-all hover:shadow-xl">
+                <div class="flex flex-col md:flex-row h-full w-full">
+                <!-- Image Section -->
+                <div class="md:w-1/2 w-full">
+                    <img 
+                    src="assets/img/madiba-rooms/exec1.jpg" 
+                    alt="Executive Room" 
+                    class="w-full h-[220px] sm:h-[250px] lg:h-[300px] object-cover"
+                    />
             </div>
-            <nav>
-                <ul class="nav nav-tabs rooms lh-room border-0 flex flex-wrap mb-[-24px]" id="nav_tab" role="tablist">
-                    <li class="mb-0 text-[20px] px-[12px] mb-[24px] leading-[28px] text-[#000] focus:text-[#000] lg:w-[25%] md:w-[50%] border-0 text-center nav-link active">
-                        <a href="#navDeluxe" class="hover:text-[#000]">
-                            <img src="assets/img/room/1.png" alt="1" class="w-full mb-[15px] rounded-[15px]">
-                            Deluxe Room
-                        </a>
-                    </li>
-                    <li class="mb-0 text-[20px] px-[12px] mb-[24px] leading-[28px] text-[#000] focus:text-[#000] lg:w-[25%] md:w-[50%] border-0 text-center nav-link">
-                        <a href="#navSingle" class="hover:text-[#000]">
-                            <img src="assets/img/room/2.png" alt="2" class="w-full mb-[15px] rounded-[15px]">
-                            Single Room
-                        </a>
-                    </li>
-                    <li class="mb-0 text-[20px] px-[12px] mb-[24px] leading-[28px] text-[#000] focus:text-[#000] lg:w-[25%] md:w-[50%] border-0 text-center nav-link">
-                        <a href="#navSuper" class="hover:text-[#000]">
-                            <img src="assets/img/room/3.png" alt="3" class="w-full mb-[15px] rounded-[15px]">
-                            Super Room
-                        </a>
-                    </li>
-                    <li class="mb-0 text-[20px] px-[12px] mb-[24px] leading-[28px] text-[#000] focus:text-[#000] lg:w-[25%] md:w-[50%] border-0 text-center nav-link">
-                        <a href="#navPresidential" class="hover:text-[#000]">
-                            <img src="assets/img/room/4.png" alt="4" class="w-full mb-[15px] rounded-[15px]">
-                            Presidential Room
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="tab-content border border-solid border-[#e3e1e1] rounded-[15px] bg-[#fff] relative p-0 mt-[25px] overflow-hidden" id="nav-tabContent">
-                <div class="tab-pane fade active show" id="navDeluxe">
-                    <div class="flex flex-wrap justify-between mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px]">
-                        <div class="xl:w-1/2 w-full px-[12px]">
-                            <div class="lh-room-contain relative px-[12px] py-[24px]">
-                                <div class="lh-contain-heading pb-[15px] flex justify-between">
-                                    <h4 class="xl:text-[22px] text-[18px] leading-[1.2] font-bold text-[#000] text-left">Deluxe Room</h4>
-                                    <div class="lh-room-price">
-                                        <h4 class="xl:text-[22px] text-[18px] text-[#FF0000] font-bold leading-[22px]">$30 /<span class="ml-[5px] text-[14px] font-normal text-[#777]">Per night</span></h4>
+                
+                <!-- Content Section -->
+                <div class="md:w-1/2 w-full p-6 flex flex-col justify-between">
+                    <div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">Executive Room (1 Person)</h4>
+                    
+                    <div class="space-y-3">
+                        <!-- Price Card 1 -->
+                        <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Nile University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                            <span class="text-xl font-bold text-red-600">₦3,616,000</span>
                                     </div>
                                 </div>
-                                <div class="lh-room-size flex flex-wrap">
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">1100 sq.ft <span class="px-[15px]">|</span></p>
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">1 king Bed <span class="px-[15px]">|</span></p>
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">Up to 4 Guest</p>
+                        
+                        <!-- Price Card 2 -->
+                        <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Baze University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                            <span class="text-xl font-bold text-red-600">₦3,816,000</span>
+                        </div>
                                 </div>
-                                <p>This is the dolor sit amet consectetur adipisicing elit. Culpa necessitatibus
-                                    consequatur nostrum iure? Similique voluptatibus totam nobis exercitationem
-                                    perferendis id, cupiditate at et praesentium quas? Quae amet, magni suscipit
-                                    sequi.</p>
-                                <div
-                                    class="lh-main-features border-t border-solid border-[#e3e1e1] pt-[30px] mt-[30px]">
-                                    <div class="lh-contain-heading pb-[15px] flex justify-between">
-                                        <h4 class="xl:text-[22px] text-[18px] leading-[1.2] font-bold text-[#000] text-left">Room Features</h4>
                                     </div>
-                                    <div class="lh-room-features flex">
-                                        <div class="lh-cols-room">
-                                            <ul class="pl-[16px] mb-0">
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">42 Inch flat screen TV</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">In-room Safe</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Mini-refrigerator</li>
-                                            </ul>
                                         </div>
-                                        <div class="lh-cols-room">
-                                            <ul class="pl-[16px] mb-0">
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Mini-refrigerator</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Breakfast</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">complimeatary bottled water</li>
-                                            </ul>
+                
                                         </div>
                                     </div>
                                 </div>
+            </div>
+
+            <div class="lg:w-1/2 w-full px-3 mb-16 lg:mb-6">
+            <div class="shadow-lg flex rounded-xl bg-white overflow-hidden h-full transition-all hover:shadow-xl">
+                <div class="flex flex-col md:flex-row h-full w-full">
+                <!-- Image Section -->
+                <div class="md:w-1/2 w-full">
+                    <img 
+                    src="assets/img/madiba-rooms/stan1.jpg" 
+                    alt="Executive Room" 
+                    class="w-full h-[220px] sm:h-[250px] lg:h-[300px] object-cover"
+                    />
+                </div>
+                
+                <!-- Content Section -->
+                <div class="md:w-1/2 w-full p-6 flex flex-col justify-between">
+                    <div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">Standard Room (1 Person)</h4>
+                    
+                    <div class="space-y-3">
+                        <!-- Price Card 1 -->
+                        <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Nile University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                            <span class="text-xl font-bold text-red-600">₦3,516,000</span>
                             </div>
                         </div>
-                        <div class="xl:w-1/2 w-full">
-                            <div class="room-img h-full w-full relative">
-                                <img src="assets/img/room/room-1.png" alt="room-img" class="room-image h-full w-full">
-                                <a href="room-details.html" class="link w-[200px] h-[200px] absolute bottom-[-200px] right-[-200px] bg-[#000000cc] rounded-[50%]">
-                                    <i class="ri-arrow-right-line absolute bottom-[100px] right-[100px] text-[#fff] text-[25px]"></i>
-                                </a>
+                        
+                        <!-- Price Card 2 -->
+                        <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Baze University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                            <span class="text-xl font-bold text-red-600">₦3,716,000</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="navSingle">
-                    <div class="flex flex-wrap justify-between mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px]">
-                        <div class="xl:w-1/2 w-full px-[12px]">
-                            <div class="lh-room-contain relative px-[12px] py-[24px]">
-                                <div class="lh-contain-heading pb-[15px] flex justify-between">
-                                    <h4 class="xl:text-[22px] text-[18px] leading-[1.2] font-bold text-[#000] text-left">Single Room</h4>
-                                    <div class="lh-room-price">
-                                        <h4 class="xl:text-[22px] text-[18px] text-[#FF0000] font-bold leading-[22px]">$40 /<span class="ml-[5px] text-[14px] font-normal text-[#777]">Per night</span></h4>
+                
                                     </div>
                                 </div>
-                                <div class="lh-room-size flex flex-wrap">
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">1200 sq.ft <span class="px-[15px]">|</span></p>
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">1 king Bed <span class="px-[15px]">|</span></p>
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">Up to 6 Guest</p>
                                 </div>
-                                <p>This is the dolor sit amet consectetur adipisicing elit. Culpa necessitatibus
-                                    consequatur nostrum iure? Similique voluptatibus totam nobis exercitationem
-                                    perferendis id, cupiditate at et praesentium quas? Quae amet, magni suscipit
-                                    sequi.</p>
-                                <div class="lh-main-features border-t border-solid border-[#e3e1e1] pt-[30px] mt-[30px]">
-                                    <div class="lh-contain-heading pb-[15px] flex justify-between">
-                                        <h4 class="xl:text-[22px] text-[18px] leading-[1.2] font-bold text-[#000] text-left">Room Features</h4>
                                     </div>
-                                    <div class="lh-room-features flex">
-                                        <div class="lh-cols-room">
-                                            <ul class="pl-[16px] mb-0">
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">42 Inch flat screen TV</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">In-room Safe</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Mini-refrigerator</li>
-                                            </ul>
+
+            <div class="lg:w-1/2 w-full px-3 mb-16 lg:mb-6 ">
+                <div class="shadow-lg flex rounded-xl bg-white overflow-hidden h-full transition-all hover:shadow-xl">
+                    <div class="flex flex-col md:flex-row h-full w-full">
+                    <!-- Image Section -->
+                    <div class="md:w-1/2 w-full">
+                        <img 
+                        src="assets/img/madiba-rooms/exec2.jpg" 
+                        alt="Executive Room" 
+                        class="w-full h-[220px] sm:h-[250px] lg:h-[300px] object-cover"
+                        />
                                         </div>
-                                        <div class="lh-cols-room">
-                                            <ul class="pl-[16px] mb-0">
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Mini-refrigerator</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Breakfast</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">complimeatary bottled water</li>
-                                            </ul>
+                    
+                    <!-- Content Section -->
+                    <div class="md:w-1/2 w-full p-6 flex flex-col justify-between">
+                        <div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">Executive Room (2 People)</h4>
+                        
+                        <div class="space-y-3">
+                            <!-- Price Card 1 -->
+                            <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                            <span class="text-sm font-medium text-gray-500">Nile University Students</span>
+                            <div class="flex items-center justify-between mt-1">
+                                <span class="text-xl font-bold text-red-600">₦3,266,000</span>
                                         </div>
                                     </div>
+                            
+                            <!-- Price Card 2 -->
+                            <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                            <span class="text-sm font-medium text-gray-500">Baze University Students</span>
+                            <div class="flex items-center justify-between mt-1">
+                                <span class="text-xl font-bold text-red-600">₦3,666,000</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="xl:w-1/2 w-full">
-                            <div class="room-img h-full w-full relative">
-                                <img src="assets/img/room/room-2.png" alt="room-img" class="room-image h-full w-full">
-                                <a href="room-details.html" class="link w-[200px] h-[200px] absolute bottom-[-200px] right-[-200px] bg-[#000000cc] rounded-[50%]">
-                                    <i class="ri-arrow-right-line absolute bottom-[100px] right-[100px] text-[#fff] text-[25px]"></i>
-                                </a>
+                        </div>
+                    
+                    </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="lg:w-1/2 w-full px-3 mb-16 lg:mb-6">
+            <div class="shadow-lg flex rounded-xl bg-white overflow-hidden h-full transition-all hover:shadow-xl">
+                <div class="flex flex-col md:flex-row h-full w-full">
+                <!-- Image Section -->
+                <div class="md:w-1/2 w-full">
+                    <img 
+                    src="assets/img/madiba-rooms/stan2.jpg" 
+                    alt="Executive Room" 
+                    class="w-full h-[220px] sm:h-[250px] lg:h-[300px] object-cover"
+                    />
+                </div>
+                
+                <!-- Content Section -->
+                <div class="md:w-1/2 w-full p-6 flex flex-col justify-between">
+                    <div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">Standard Room (2 People)</h4>
+                    
+                    <div class="space-y-3">
+                        <!-- Price Card 1 -->
+                        <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Nile University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                            <span class="text-xl font-bold text-red-600">₦3,116,000</span>
+                        </div>
+                        </div>
+                        
+                        <!-- Price Card 2 -->
+                        <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Baze University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                            <span class="text-xl font-bold text-red-600">₦3,216,000</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="navSuper">
-                    <div class="flex flex-wrap justify-between mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px]">
-                        <div class="xl:w-1/2 w-full px-[12px]">
-                            <div class="lh-room-contain relative px-[12px] py-[24px]">
-                                <div class="lh-contain-heading pb-[15px] flex justify-between">
-                                    <h4 class="xl:text-[22px] text-[18px] leading-[1.2] font-bold text-[#000] text-left">Super Room</h4>
-                                    <div class="lh-room-price">
-                                        <h4 class="xl:text-[22px] text-[18px] text-[#FF0000] font-bold leading-[22px]">$50 /
-                                            <span class="ml-[5px] text-[14px] font-normal text-[#777]">Per night</span>
-                                        </h4>
+                
                                     </div>
                                 </div>
-                                <div class="lh-room-size flex flex-wrap">
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">1350 sq.ft <span class="px-[15px]">|</span></p>
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">2 king Bed <span class="px-[15px]">|</span></p>
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">Up to 8 Guest</p>
                                 </div>
-                                <p>This is the dolor sit amet consectetur adipisicing elit. Culpa necessitatibus
-                                    consequatur nostrum iure? Similique voluptatibus totam nobis exercitationem
-                                    perferendis id, cupiditate at et praesentium quas? Quae amet, magni suscipit
-                                    sequi.</p>
-                                <div class="lh-main-features border-t border-solid border-[#e3e1e1] pt-[30px] mt-[30px]">
-                                    <div class="lh-contain-heading pb-[15px] flex justify-between">
-                                        <h4 class="xl:text-[22px] text-[18px] leading-[1.2] font-bold text-[#000] text-left">Room
-                                            Features
-                                        </h4>
                                     </div>
-                                    <div class="lh-room-features flex">
-                                        <div class="lh-cols-room">
-                                            <ul class="pl-[16px] mb-0">
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">42 Inch flat screen TV</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">In-room Safe</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Mini-refrigerator</li>
-                                            </ul>
+
+            <div class="lg:w-1/2 w-full px-3 mb-16 lg:mb-6 ">
+                <div class="shadow-lg flex rounded-xl bg-white overflow-hidden h-full transition-all hover:shadow-xl">
+                    <div class="flex flex-col md:flex-row h-full w-full">
+                    <!-- Image Section -->
+                    <div class="md:w-1/2 w-full">
+                        <img 
+                        src="assets/img/madiba-rooms/exec3.jpg" 
+                        alt="Executive Room" 
+                        class="w-full h-[220px] sm:h-[250px] lg:h-[300px] object-cover"
+                        />
                                         </div>
-                                        <div class="lh-cols-room">
-                                            <ul class="pl-[16px] mb-0">
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Mini-refrigerator</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Breakfast</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">complimeatary bottled water</li>
-                                            </ul>
+                    
+                    <!-- Content Section -->
+                    <div class="md:w-1/2 w-full p-6 flex flex-col justify-between">
+                        <div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">Executive Room (3 People)</h4>
+                        
+                        <div class="space-y-3">
+                            <!-- Price Card 1 -->
+                            <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                            <span class="text-sm font-medium text-gray-500">Nile University Students</span>
+                            <div class="flex items-center justify-between mt-1">
+                                <span class="text-xl font-bold text-red-600">₦2,916,000</span>
                                         </div>
                                     </div>
+                            
+                            <!-- Price Card 2 -->
+                            <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                            <span class="text-sm font-medium text-gray-500">Baze University Students</span>
+                            <div class="flex items-center justify-between mt-1">
+                                <span class="text-xl font-bold text-red-600">₦3,116,000</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="xl:w-1/2 w-full">
-                            <div class="room-img h-full w-full relative">
-                                <img src="assets/img/room/room-3.png" alt="room-img" class="room-image h-full w-full">
-                                <a href="room-details.html" class="link w-[200px] h-[200px] absolute bottom-[-200px] right-[-200px] bg-[#000000cc] rounded-[50%]">
-                                    <i class="ri-arrow-right-line absolute bottom-[100px] right-[100px] text-[#fff] text-[25px]"></i>
-                                </a>
+                        </div>
+                    
+                    </div>
+                    </div>
+                </div>
+            </div>
+    ` 
+            <div class="lg:w-1/2 w-full px-3 mb-16 lg:mb-6">
+            <div class="shadow-lg flex rounded-xl bg-white overflow-hidden h-full transition-all hover:shadow-xl">
+                <div class="flex flex-col md:flex-row h-full w-full">
+                <!-- Image Section -->
+                <div class="md:w-1/2 w-full">
+                    <img 
+                    src="assets/img/madiba-rooms/stan3.jpg" 
+                    alt="Executive Room" 
+                    class="w-full h-[220px] sm:h-[250px] lg:h-[300px] object-cover"
+                    />
+                </div>
+                
+                <!-- Content Section -->
+                <div class="md:w-1/2 w-full p-6 flex flex-col justify-between">
+                    <div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">Standard Room (3 People)</h4>
+                    
+                    <div class="space-y-3">
+                        <!-- Price Card 1 -->
+                        <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Nile University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                            <span class="text-xl font-bold text-red-600">₦2,766,000</span>
+                        </div>
+                        </div>
+                        
+                        <!-- Price Card 2 -->
+                        <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                        <span class="text-sm font-medium text-gray-500">Baze University Students</span>
+                        <div class="flex items-center justify-between mt-1">
+                            <span class="text-xl font-bold text-red-600">₦2,966,000</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="navPresidential">
-                    <div class="flex flex-wrap justify-between mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px]">
-                        <div class="xl:w-1/2 w-full px-[12px]">
-                            <div class="lh-room-contain relative px-[12px] py-[24px]">
-                                <div class="lh-contain-heading pb-[15px] flex justify-between">
-                                    <h4 class="xl:text-[22px] text-[18px] leading-[1.2] font-bold text-[#000] text-left">Presidential Room</h4>
-                                    <div class="lh-room-price">
-                                        <h4 class="xl:text-[22px] text-[18px] text-[#FF0000] font-bold leading-[22px]">$100 /
-                                            <span class="ml-[5px] text-[14px] font-normal text-[#777]">Per night</span>
-                                        </h4>
+                
                                     </div>
                                 </div>
-                                <div class="lh-room-size flex flex-wrap">
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">1500 sq.ft <span class="px-[15px]">|</span></p>
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">2 king Bed <span class="px-[15px]">|</span></p>
-                                    <p class="pb-[15px] text-[14px] text-[#777] leading-[1.2]">Up to 8 Guest</p>
                                 </div>
-                                <p>This is the dolor sit amet consectetur adipisicing elit. Culpa necessitatibus
-                                    consequatur nostrum iure? Similique voluptatibus totam nobis exercitationem
-                                    perferendis id, cupiditate at et praesentium quas? Quae amet, magni suscipit
-                                    sequi.</p>
-                                <div
-                                    class="lh-main-features border-t border-solid border-[#e3e1e1] pt-[30px] mt-[30px]">
-                                    <div class="lh-contain-heading pb-[15px] flex justify-between">
-                                        <h4 class="xl:text-[22px] text-[18px] leading-[1.2] font-bold text-[#000] text-left">Room
-                                            Features
-                                        </h4>
                                     </div>
-                                    <div class="lh-room-features flex">
-                                        <div class="lh-cols-room">
-                                            <ul class="pl-[16px] mb-0">
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">42 Inch flat screen TV</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">In-room Safe</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Mini-refrigerator</li>
-                                            </ul>
+
+            <div class="lg:w-1/2 w-full px-3 mb-16 lg:mb-6">
+                <div class="shadow-lg flex rounded-xl bg-white overflow-hidden h-full transition-all hover:shadow-xl">
+                    <div class="flex flex-col md:flex-row h-full w-full">
+                    <!-- Image Section -->
+                    <div class="md:w-1/2 w-full">
+                        <img 
+                        src="assets/img/madiba-rooms/exec4.jpg" 
+                        alt="Executive Room" 
+                        class="w-full h-[220px] sm:h-[250px] lg:h-[300px] object-cover"
+                        />
                                         </div>
-                                        <div class="lh-cols-room">
-                                            <ul class="pl-[16px] mb-0">
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Mini-refrigerator</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">Breakfast</li>
-                                                <li class="text-[15px] text-[#777] leading-[1.2]">complimeatary bottled water</li>
-                                            </ul>
+                    
+                    <!-- Content Section -->
+                    <div class="md:w-1/2 w-full p-6 flex flex-col justify-between">
+                        <div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4">Executive Room (4 People)</h4>
+                        
+                        <div class="space-y-3">
+                            <!-- Price Card 1 -->
+                            <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                            <span class="text-sm font-medium text-gray-500">Nile University Students</span>
+                            <div class="flex items-center justify-between mt-1">
+                                <span class="text-xl font-bold text-red-600">₦2,816,000</span>
                                         </div>
                                     </div>
+                            
+                            <!-- Price Card 2 -->
+                            <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors">
+                            <span class="text-sm font-medium text-gray-500">Baze University Students</span>
+                            <div class="flex items-center justify-between mt-1">
+                                <span class="text-xl font-bold text-red-600">₦3,116,000</span>
                                 </div>
+                            </div>
                             </div>
                         </div>
-                        <div class="xl:w-1/2 w-full">
-                            <div class="room-img h-full w-full relative">
-                                <img src="assets/img/room/room-4.png" alt="room-img" class="room-image h-full w-full">
-                                <a href="room-details.html" class="link w-[200px] h-[200px] absolute bottom-[-200px] right-[-200px] bg-[#000000cc] rounded-[50%]">
-                                    <i class="ri-arrow-right-line absolute bottom-[100px] right-[100px] text-[#fff] text-[25px]"></i>
-                                </a>
-                            </div>
+                    
                         </div>
                     </div>
                 </div>
+            </div>
+        
+        
             </div>
         </div>
-        <div class="2xl:after:w-[500px] lg:after:w-[400px] after:w-[300px] dark-opicity-1 2xl:after:h-[500px] xl:after:h-[400px] after:h-[300px] bg-size-full after:absolute 2xl:after:top-[100px] after:top-[75px] after:left-[-180px] after:z-[-1] after:bg-[url('assets/img/theme/2.png')]"></div>
+
     </section>
+
+    <!-- Other Students -->
+    <div class="mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-w-[90%] my-12 bg-white border border-red-100 rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="inline-flex items-center justify-center mb-4 p-3 rounded-full bg-red-50">
+        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Attending Another University?</h3>
+        <p class="text-gray-600 mb-4">
+            We welcome all students. Contact us for personalized rates and availability.
+        </p>
+        <a href="contact.html" class="custom_pricing inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-lg text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all duration-200 shadow-sm hover:shadow-md">
+        Contact for Pricing
+        <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"/>
+        </svg>
+        </a>
+    </div>
+
+   
+
+   
 
     <!-- Footer -->
-    <footer class="pt-[70px] bg-[#2b2b2d]">
+    <footer class="pt-[70px] bg-[#2b2b2d]"
+    
+    >
         <div class="mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px]">
             <div class="footer-top-section pb-[70px]">
                 <div class="flex flex-wrap mb-[-24px] w-full">
@@ -563,16 +583,9 @@
                                 </li>
                                 <li class="py-[5px]">
                                     <code class="text-[16px] text-[#FF0000]">*</code>
-                                    <a href="room-details.html" class="text-[14px] text-[#bfbfc0] hover:text-[#bfbfc0]">Rooms & suites</a>
+                                    <a href="facilities.html" class="text-[14px] text-[#bfbfc0] hover:text-[#bfbfc0]">Amenities</a>
                                 </li>
-                                <li class="py-[5px]">
-                                    <code class="text-[16px] text-[#FF0000]">*</code>
-                                    <a href="spa.html" class="text-[14px] text-[#bfbfc0] hover:text-[#bfbfc0]">spa & Wellness</a>
-                                </li>
-                                <li class="py-[5px]">
-                                    <code class="text-[16px] text-[#FF0000]">*</code>
-                                    <a href="restaurant.html" class="text-[14px] text-[#bfbfc0] hover:text-[#bfbfc0]">Restaurant</a>
-                                </li>
+                                
                                 <li class="py-[5px]">
                                     <code class="text-[16px] text-[#FF0000]">*</code>
                                     <a href="gallery.html" class="text-[14px] text-[#bfbfc0] hover:text-[#bfbfc0]">Gallery</a>
@@ -587,18 +600,13 @@
                     <div class="lg:w-1/2 w-full px-[12px] mb-[24px] lg:order-[2] order-[1]">
                         <div class="lh-social-media h-full lg:border-x-[1px] lg:border-b-[0] md:border-b-[1px] border-b-[0] lg:pb-[0] md:pb-[30px] pb-[0] border-solid border-[#808384]">
                             <div class="footer-logos flex md:justify-center justify-start">
-                                <img src="assets/img/logo/logo.png" alt="logo" class="w-[180px]">
+                                <!-- <img src="assets/img/logo/logo.png" alt="logo" class="w-[180px]"> -->
+                                <img src="assets/img/logo/madiba5.png" alt="logo" class="w-[180px]">
+
                             </div>
                             <div class="lh-footer-social lg:p-[24px] py-[24px] lg:border-b border-solid border-[#808384]">
                                 <p class="md:m-auto md:text-center text-left text-[14px] max-w-[400px] text-[#bfbfc0] leading-[22px]">
-                                    This is the dolor sit amet consectetur adipisicing elit. Libero voluptatem soluta
-                                    eaque ullam accusantium animi!</p>
-                                <form class="lh-control-footer mt-[24px] relative flex items-center lg:max-w-full ml-[auto] mr-[auto] md:max-w-[500px] max-w-full" role="search">
-                                    <div class="lh-control-inner-icons w-[40px] h-[40px] bg-[#FF0000] flex items-center justify-center cursor-pointer absolute right-[5px] top-[5px] z-2 rounded-[10px]">
-                                        <i class="ri-send-plane-line text-[20px] text-[#fff]"></i>
-                                    </div>
-                                    <input class="form-control shadow-none border-0 focus:bg-hidden text-[14px] font-light text-[#fff] z-1 relative bg-[#4b4b4c] w-full h-[50px] m-0 pl-[15px] pr-0 py-0" type="search" placeholder="Subscribe..." aria-label="Search">
-                                </form>
+                                    A sanctuary for scholars: blending productivity, comfort, and style in every detail</p>
                             </div>
                             <div class="lh-follow-social md:block flex-col justify-self-center items-center xl:pt-[24px] xl:pb-0 lg:pt-[22px] lg:pb-0 pt-[0] lg:pb-[30px] pb-0">
                                 <h4 class="heading text-[18px] font-medium md:text-center text-left">Follow On Social</h4>
@@ -653,82 +661,17 @@
             <div class="footer-bottom-copy px-[12px]">
                 <div class="flex justify-center border-t-[1px] border-solid border-[#808384]">
                     <span class="text-[#fff] py-[10px] text-center">Copyright @ <span id="copyright_year"></span>
-                    <a href="index.html" class="text-[#FF0000] hover:text-[#FF0000]">Luxurious</a> All Rights Reserved</span>
+                    <a href="https://www.profech.com" class="text-[#FF0000] hover:text-[#FF0000]">Profech IT Services</a> All Rights Reserved</span>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Tap to top -->
-    <a href="#"
-        class="back-to-top hidden fixed right-[15px] bottom-[15px] z-10 hover:text-[#fff] cursor-pointer w-[38px] h-[38px] rounded-[20px] bg-[#FF0000] text-[#fff] text-center text-[22px] leading-relaxed result-placeholder">
+    <a href="#" class="back-to-top hidden fixed right-[15px] bottom-[15px] z-10 hover:text-[#fff] cursor-pointer w-[38px] h-[38px] rounded-[20px] bg-[#FF0000] text-[#fff] text-center text-[22px] leading-relaxed result-placeholder">
         <i class="ri-arrow-up-double-line text-[20px]"></i>
     </a>
 
-    <!-- Side-tool -->
-    <div class="tool-overlay hidden w-full h-screen fixed top-0 left-0 bg-[#000000b3] z-[16]"></div>
-    <div class="lh-tool w-[280px] fixed top-0 right-[-280px] z-[16] duration-[0.4s] ease text-[#000]">
-        <div class="flex text-[#000] select-none">
-            <button type="button"
-                class="btn-lh-tool result-placeholder close-tool duration-[0.3s] ease-in h-[40px] w-[40px] px-[10px] mt-[200px] ml-[-40px] border-0 rounded-l-[10px] bg-[#000] text-[#fff]">
-                <i class="ri-settings-line text-[20px]"></i>
-                <span class="hidden">tool</span>
-            </button>
-            <div class="h-screen p-0 m-0 bg-[#fff]">
-                <div class="p-[24px] flex items-center justify-between border-b-[1px] border-solid border-[#e3e1e1]">
-                    <h5 class="text-[#000] font-bold text-[18px]">Tools</h5>
-                </div>
-                <div class="pt-[24px] pr-[24px] pl-[24px]">
-                    <h2 class="mb-0 text-left text-[15px] font-bold text-[#000]">Select Color</h2>
-                </div>
-                <ul class="lh-color p-[24px] m-0 border-b-[1px] border-solid border-[#e3e1e1]">
-                    <li class="c1 bg-[#FF0000] relative inline-block align-middle h-[30px] w-[30px] rounded-[50%] cursor-pointer m-[5px] active-colors"></li>
-                    <li class="c2 bg-[#3e9172] relative inline-block align-middle h-[30px] w-[30px] rounded-[50%] cursor-pointer m-[5px]"></li>
-                    <li class="c3 bg-[#677993] relative inline-block align-middle h-[30px] w-[30px] rounded-[50%] cursor-pointer m-[5px]"></li>
-                    <li class="c4 bg-[#d31111] relative inline-block align-middle h-[30px] w-[30px] rounded-[50%] cursor-pointer m-[5px]"></li>
-                    <li class="c5 bg-[#d3b41c] relative inline-block align-middle h-[30px] w-[30px] rounded-[50%] cursor-pointer m-[5px]"></li>
-                    <li class="c6 bg-[#db98b1] relative inline-block align-middle h-[30px] w-[30px] rounded-[50%] cursor-pointer m-[5px]"></li>
-                    <li class="c7 bg-[#799ffe] relative inline-block align-middle h-[30px] w-[30px] rounded-[50%] cursor-pointer m-[5px]"></li>
-                    <li class="c8 bg-[#F2709C] relative inline-block align-middle h-[30px] w-[30px] rounded-[50%] cursor-pointer m-[5px]"></li>
-                    <li class="c9 bg-[#ff8763] relative inline-block align-middle h-[30px] w-[30px] rounded-[50%] cursor-pointer m-[5px]"></li>
-                </ul>
-                <div class="pt-[24px] pr-[24px] pl-[24px]">
-                    <h2 class="mb-0 text-left text-[15px] font-bold text-[#000]">Dark mode</h2>
-                </div>
-                <ul class="dark-mode p-[24px] m-0 border-b-[1px] border-solid flex border-[#e3e1e1]">
-                    <li
-                        class="dark text-[#fff] relative inline-block align-middle h-[30px] w-[30px] rounded-[50%] cursor-pointer m-[5px] border-[1px] border-solid border-[#e3e1e1]">
-                    </li>
-                    <li
-                        class="white text-[#000] relative inline-block align-middle h-[30px] w-[30px] rounded-[50%] cursor-pointer m-[5px] border-[1px] border-solid border-[#e3e1e1] active-dark-mode">
-                    </li>
-                </ul>
-                <div class="pt-[24px] pr-[24px] pl-[24px]">
-                    <h2 class="mb-0 text-left text-[15px] font-bold text-[#000]">Skin mode</h2>
-                </div>
-                <ul class="skin-mode p-[24px] m-0 border-b-[1px] border-solid flex border-[#e3e1e1]">
-                    <li class="skin-1 relative inline-block m-[5px]">
-                        <span class="cursor-pointer">
-                            <img src="assets/img/skin/1.png" alt="skin-1"
-                                class="h-[60px] w-[60px] rounded-[5px] border-[1px] border-solid border-[#e3e1e1]">
-                        </span>
-                    </li>
-                    <li class="skin-2 relative inline-block m-[5px]">
-                        <span class="cursor-pointer">
-                            <img src="assets/img/skin/2.png" alt="skin-2"
-                                class="h-[60px] w-[60px] rounded-[5px] border-[1px] border-solid border-[#e3e1e1]">
-                        </span>
-                    </li>
-                    <li class="skin-3 relative inline-block m-[5px] active">
-                        <span class="cursor-pointer">
-                            <img src="assets/img/skin/3.png" alt="skin-3"
-                                class="h-[60px] w-[60px] rounded-[5px] border-[1px] border-solid border-[#e3e1e1]">
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
     <!-- Plugins JS -->
     <script src="assets/js/vendor/jquery.min.js"></script>
@@ -738,7 +681,7 @@
     <script src="assets/js/vendor/semantic.min.js"></script>
     <script src="assets/js/vendor/slick.min.js"></script>
 
-    <!-- Main-js -->
+    <!-- main style -->
     <script src="assets/js/main.js"></script>
 
 </body>

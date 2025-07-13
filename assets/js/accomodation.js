@@ -150,9 +150,9 @@
 function generateSlideContent(roomData) {
     // Format price with Nigerian Naira symbol
     const formatPrice = (price) => `₦${price.toLocaleString()}`;
-    // Responsive amenities: show only first 2 for <lg
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
-    const amenitiesToShow = isMobile ? roomData.amenities.slice(0, 2) : roomData.amenities;
+    // Responsive amenities: show only on large screens
+    const isLargeScreen = typeof window !== 'undefined' && window.innerWidth >= 1024;
+    const amenitiesToShow = isLargeScreen ? roomData.amenities : [];
     return `
         <div class="embla__slide p-1">
             <div class="card-container relative overflow-hidden rounded-xl shadow-2xl transition-all duration-300 hover:shadow-3xl hover:-translate-y-1 bg-white border border-gray-200">
@@ -188,7 +188,7 @@ function generateSlideContent(roomData) {
                         `).join('')}
                     </ul>
                     
-                    <div class="mt-auto pt-2">
+                    <div class="hidden lg:block mt-auto pt-2">
                         <span class="inline-flex items-center text-sm bg-gradient-to-r from-green-400 to-green-500 backdrop-blur-sm border border-green-300/50 rounded-full px-4 py-2 text-white font-semibold shadow-lg">
                             ${roomData.discount}
                         </span>
